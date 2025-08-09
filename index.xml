@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码小梓-コード小梓</title>
+    <link>https://li958634.github.io/dmxzweb/algolia.json</link>
+    <description>Recent content from 代码小梓-コード小梓</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>14706825732@163.com (代码小梓)</managingEditor>
+    <webMaster>14706825732@163.com (代码小梓)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Fri, 08 Aug 2025 15:14:42 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://li958634.github.io/dmxzweb/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>XZai 2.0 - 训练独属于你的AI朋友</title>
+      <link>https://li958634.github.io/dmxzweb/post/xzai2.0---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/</link>
+      <pubDate>Fri, 08 Aug 2025 15:14:42 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/xzai2.0---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/</guid>
+      <description>
+        <![CDATA[<h1>XZai 2.0 - 训练独属于你的AI朋友</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <ol>
+<li>
+<h1 id="xzai-20---训练独属于你的ai朋友">
+<a class="header-anchor" href="#xzai-20---%e8%ae%ad%e7%bb%83%e7%8b%ac%e5%b1%9e%e4%ba%8e%e4%bd%a0%e7%9a%84ai%e6%9c%8b%e5%8f%8b"></a>
+XZai 2.0 - 训练独属于你的AI朋友
+</h1><h2 id="核心升级亮点">
+<a class="header-anchor" href="#%e6%a0%b8%e5%bf%83%e5%8d%87%e7%ba%a7%e4%ba%ae%e7%82%b9"></a>
+核心升级亮点
+</h2><ul>
+<li><strong>本地模型</strong>：基于ChatterBot的增强版本地对话引擎</li>
+<li><strong>云API支持</strong>：集成OpenAI/DeepSeek/Kimi/Claude/Gemini五大AI服务</li>
+<li><strong>智能路由</strong>：根据查询内容自动选择最优响应来源</li>
+<li>历史记录：支持模糊搜索记录</li>
+</ul>
+<h2 id="关键技术栈">
+<a class="header-anchor" href="#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e6%a0%88"></a>
+关键技术栈
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">graph TD
+</span></span><span class="line"><span class="cl">    A[前端界面] --&gt; B[ttkbootstrap主题引擎]
+</span></span><span class="line"><span class="cl">    A --&gt; C[Win32API特效集成]
+</span></span><span class="line"><span class="cl">    B --&gt; D[亚克力/阴影/圆角效果]
+</span></span><span class="line"><span class="cl">    C --&gt; E[系统主题检测]
+</span></span><span class="line"><span class="cl">    F[后端核心] --&gt; G[多模型路由]
+</span></span><span class="line"><span class="cl">    G --&gt; H[本地ChatterBot]
+</span></span><span class="line"><span class="cl">    G --&gt; I[云API适配层]
+</span></span><span class="line"><span class="cl">    H --&gt; J[Levenshtein语义匹配]
+</span></span><span class="line"><span class="cl">    I --&gt; K[HTTP请求池]
+</span></span></code></pre></div><h2 id="核心功能模块">
+<a class="header-anchor" href="#%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e6%a8%a1%e5%9d%97"></a>
+核心功能模块
+</h2><h3 id="1-智能对话系统">
+<a class="header-anchor" href="#1-%e6%99%ba%e8%83%bd%e5%af%b9%e8%af%9d%e7%b3%bb%e7%bb%9f"></a>
+1. 智能对话系统
+</h3><ul>
+<li>
+<p><strong>混合响应引擎</strong>：</p>
+<p>python</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def get_bot_response(self, message):
+</span></span><span class="line"><span class="cl">    if self.config[&#34;api_settings&#34;][&#34;active_model&#34;] == &#34;local&#34;:
+</span></span><span class="line"><span class="cl">        # 本地语义匹配
+</span></span><span class="line"><span class="cl">        similar_question = self.find_similar_question(message) 
+</span></span><span class="line"><span class="cl">        return self.qa_mapping.get(similar_question) or str(self.chatbot.get_response(message))
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        # 云API调用
+</span></span><span class="line"><span class="cl">        return self.call_api_model(message)
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="2-专业训练体系">
+<a class="header-anchor" href="#2-%e4%b8%93%e4%b8%9a%e8%ae%ad%e7%bb%83%e4%bd%93%e7%b3%bb"></a>
+2. 专业训练体系
+</h3><ul>
+<li><strong>多格式兼容</strong>：支持标准QA对/分类任务/阅读理解数据</li>
+<li><strong>批量导入</strong>：智能JSON解析与错误修复</li>
+<li><strong>实时反馈</strong>：训练过程可视化监控</li>
+</ul>
+<h3 id="3-企业级功能">
+<a class="header-anchor" href="#3-%e4%bc%81%e4%b8%9a%e7%ba%a7%e5%8a%9f%e8%83%bd"></a>
+3. 企业级功能
+</h3><ul>
+<li><strong>配置中心</strong>：API密钥管理系统</li>
+<li><strong>数据持久化</strong>：自动备份与版本控制</li>
+<li><strong>跨会话管理</strong>：对话历史检索与导出</li>
+</ul>
+<h2 id="使用规范">
+<a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e8%a7%84%e8%8c%83"></a>
+使用规范
+</h2><h3 id="运行要求">
+<a class="header-anchor" href="#%e8%bf%90%e8%a1%8c%e8%a6%81%e6%b1%82"></a>
+运行要求
+</h3><p>bash</p>
+        
+        <hr><p>本文2025-08-08首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-08</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>250&#43;病毒样本实测！四款主流杀软谁才是扫描之王？</title>
+      <link>https://li958634.github.io/dmxzweb/post/250&#43;%E7%97%85%E6%AF%92%E6%A0%B7%E6%9C%AC%E5%AE%9E%E6%B5%8B%E5%9B%9B%E6%AC%BE%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF%E8%B0%81%E6%89%8D%E6%98%AF%E6%89%AB%E6%8F%8F%E4%B9%8B%E7%8E%8B/</link>
+      <pubDate>Sun, 03 Aug 2025 11:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/250&#43;%E7%97%85%E6%AF%92%E6%A0%B7%E6%9C%AC%E5%AE%9E%E6%B5%8B%E5%9B%9B%E6%AC%BE%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF%E8%B0%81%E6%89%8D%E6%98%AF%E6%89%AB%E6%8F%8F%E4%B9%8B%E7%8E%8B/</guid>
+      <description>
+        <![CDATA[<h1>250+病毒样本实测！四款主流杀软谁才是扫描之王？</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <blockquote>
+<p>[!IMPORTANT]</p>
+<p>More info<a href="https://wwhb.lanzouu.com/ig17H32lvz5i">250+病毒包下载地址</a>    访问密码:caizi     压缩包密码：infected</p></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">视频内杀毒软件下载地址：
+</span></span><span class="line"><span class="cl">1.https://www.huorong.cn
+</span></span><span class="line"><span class="cl">2.https://sd.360.cn
+</span></span><span class="line"><span class="cl">3.https://stgsem.2345.com/ruanjian/by/index.html?id=60897&amp;msclkid=1b86088791fe11dfbfbb6017f1aa9b19
+</span></span><span class="line"><span class="cl">4.https://young.duba.net/?f=3
+</span></span></code></pre></div><p>More info: <a href="https://space.bilibili.com/1114574804?spm_id_from=333.788.0.0">欢迎大家来我的哔哩哔哩主页游玩qwq！</a></p>
+<p>可以与我一起玩游戏，我的QQ：1931688073</p>
+<p>也可以加入我们的交流群：显石的编程交流群新群：975725732</p>
+<p>以及我没什么人气的交流群：1038340746</p>
+<p>欢迎大家来玩！！！	qwq</p>
+        
+        <hr><p>本文2025-08-03首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-03</p>]]>
+      </description>
+      
+        <category>视频病毒</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>2025.8.3更新日志</title>
+      <link>https://li958634.github.io/dmxzweb/post/2025.8.3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Sun, 03 Aug 2025 11:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/2025.8.3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <description>
+        <![CDATA[<h1>2025.8.3更新日志</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <h2 id="-202583-更新内容">
+<a class="header-anchor" href="#-202583-%e6%9b%b4%e6%96%b0%e5%86%85%e5%ae%b9"></a>
+✨ 2025.8.3 更新内容
+</h2><ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 1. 音乐播放器更新（东方歌单）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 新增东方Project官方音乐合集歌单
+</span></span><span class="line"><span class="cl">- 支持后台自动播放（音量已优化）
+</span></span><span class="line"><span class="cl">- 播放器UI适配暗黑模式
+</span></span></code></pre></div></li>
+</ul>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<h3 id="2-评论系统升级giscus">
+<a class="header-anchor" href="#2-%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f%e5%8d%87%e7%ba%a7giscus"></a>
+2. 评论系统升级（Giscus）
+</h3><ul>
+<li>全面启用GitHub讨论区的Giscus评论系统</li>
+<li>支持Markdown语法和表情回复</li>
+<li>登录GitHub即可参与互动</li>
+</ul></blockquote>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 3. 文章版权声明
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 全站启用CC BY-NC-SA 4.0许可证
+</span></span><span class="line"><span class="cl">- 文章底部新增版权信息卡：
+</span></span></code></pre></div></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 4. 网页平滑切换（PJAX）
+</span></span><span class="line"><span class="cl">- 全站启用无刷新页面加载技术
+</span></span><span class="line"><span class="cl">- 保留音乐播放器连续播放状态
+</span></span><span class="line"><span class="cl">- 加载动画优化为「御币旋转」特效
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### 5. 多语言支持：简体中文，英文，日语（语言功能并不完善）
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; 如有任何问题，欢迎在评论区反馈~  
+</span></span><span class="line"><span class="cl">&gt; **少女祈祷中...**  
+</span></span><span class="line"><span class="cl">&gt; @ 代码小梓  
+</span></span><span class="line"><span class="cl">&gt; *2025年8月3日*
+</span></span></code></pre></div>
+        
+        <hr><p>本文2025-08-03首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-03</p>]]>
+      </description>
+      
+        <category>公告</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>所有病毒下载地址</title>
+      <link>https://li958634.github.io/dmxzweb/post/%E6%89%80%E6%9C%89%E7%97%85%E6%AF%92%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/%E6%89%80%E6%9C%89%E7%97%85%E6%AF%92%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/</guid>
+      <description>
+        <![CDATA[<h1>所有病毒下载地址</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <p>More info: <a href="https://wwhb.lanzouu.com/iHE2S2y9949i">sys.exe病毒</a></p>
+<p>More info:<a href="https://wwhb.lanzouu.com/iqw0I31faisb">NO escape病毒</a></p>
+<p>More info:<a href="https://wwhb.lanzouu.com/ipJkS2y7w53e">System destruction病毒</a></p>
+<p>More info:<a href="https://wwhb.lanzouu.com/iDJJA315lnva">锁机病毒</a></p>
+<p>More info<a href="https://wwhb.lanzouu.com/iZ2Gx32drish">1980-1999病毒库大全3500+</a></p>
+<p>注：所有病毒的访问密码是：caizi</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>实用工具</title>
+      <link>https://li958634.github.io/dmxzweb/post/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</guid>
+      <description>
+        <![CDATA[<h1>实用工具</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <p>More info:<a href="https://wwhb.lanzouu.com/i6IPN2vsly5c">菜梓-用户账户管理工具 64位</a></p>
+<p>More info:<a href="https://wwhb.lanzouu.com/i04k02vsly6d">菜梓-用户账户管理工具 32位</a></p>
+<p>More info:<a href="https://wwhb.lanzouu.com/i81Rn30wr7za">VM安全启动问题修复工具</a></p>
+<p>注：所有程序的访问密码是：caizi</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>内存压榨器介绍及下载</title>
+      <link>https://li958634.github.io/dmxzweb/post/%E5%86%85%E5%AD%98%E5%8E%8B%E6%A6%A8%E5%99%A8%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/%E5%86%85%E5%AD%98%E5%8E%8B%E6%A6%A8%E5%99%A8%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</guid>
+      <description>
+        <![CDATA[<h1>内存压榨器介绍及下载</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Memory Squeezer - 内存压榨器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 简介
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Memory Squeezer 是一个用于测试系统内存性能的工具，可以模拟高内存使用场景，帮助开发者测试应用程序在内存压力下的表现。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 功能特性
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- ✅ 单线程和多进程内存压榨模式
+</span></span><span class="line"><span class="cl">- ✅ 可配置的内存块大小和分配速度
+</span></span><span class="line"><span class="cl">- ✅ 实时内存状态监控
+</span></span><span class="line"><span class="cl">- ✅ 四重安全确认机制防止误操作
+</span></span><span class="line"><span class="cl">- ✅ 内存安全限制保护
+</span></span><span class="line"><span class="cl">- ✅ 详细的日志记录
+</span></span><span class="line"><span class="cl">- ✅ 支持多种主题风格
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 系统要求
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- windows10 +
+</span></span><span class="line"><span class="cl">- 建议内存大小4GB+(避免因为内存过小，程序写入速度过快导致系统问题！)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 安装
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. 克隆仓库或下载源代码
+</span></span><span class="line"><span class="cl">```bash
+</span></span><span class="line"><span class="cl">git clone https://github.com/yourusername/memory-squeezer.git
+</span></span><span class="line"><span class="cl">cd memory-squeezer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">注：本文作者及程序作者不承担此程序造成的任何问题！！！！！！！
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">程序作者QQ：640384548
+</span></span></code></pre></div><h2 id="使用方法">
+<a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95"></a>
+使用方法
+</h2><h3 id="基本使用">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e4%bd%bf%e7%94%a8"></a>
+基本使用
+</h3><ol>
+<li>运行程序</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python memory_squeezer.py
+</span></span></code></pre></div><ol>
+<li>点击&quot;开始压榨&quot;按钮启动内存压榨</li>
+<li>观察内存使用情况和进度</li>
+<li>使用&quot;安全停止&quot;或&quot;紧急停止&quot;结束压榨</li>
+</ol>
+<h3 id="配置选项">
+<a class="header-anchor" href="#%e9%85%8d%e7%bd%ae%e9%80%89%e9%a1%b9"></a>
+配置选项
+</h3><p>程序会自动创建 <code>config.ini</code> 配置文件，您可以修改以下参数：</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>欢迎进入我的网站QWQ</title>
+      <link>https://li958634.github.io/dmxzweb/post/%E6%AC%A2%E8%BF%8E%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E7%BD%91%E7%AB%99qwq/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/%E6%AC%A2%E8%BF%8E%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E7%BD%91%E7%AB%99qwq/</guid>
+      <description>
+        <![CDATA[<h1>欢迎进入我的网站QWQ</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <p>More info: <a href="https://space.bilibili.com/1114574804?spm_id_from=333.788.0.0">欢迎大家来我的哔哩哔哩主页游玩qwq！</a></p>
+<p>可以与我一起玩游戏，我的QQ：1931688073</p>
+<p>也可以加入我们的交流群：显石的编程交流群 二群：975725732</p>
+<p>显石的编程交流群 大群：1037744097</p>
+<p>以及我没什么人气的交流群：1038340746</p>
+<p>欢迎大家来玩！！！	qwq</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>XZai - 训练独属于你的AI朋友</title>
+      <link>https://li958634.github.io/dmxzweb/post/xzai---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/xzai---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/</guid>
+      <description>
+        <![CDATA[<h1>XZai - 训练独属于你的AI朋友</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <h1 id="xzai---训练独属于你的ai朋友">
+<a class="header-anchor" href="#xzai---%e8%ae%ad%e7%bb%83%e7%8b%ac%e5%b1%9e%e4%ba%8e%e4%bd%a0%e7%9a%84ai%e6%9c%8b%e5%8f%8b"></a>
+XZai - 训练独属于你的AI朋友
+</h1><h2 id="项目概述">
+<a class="header-anchor" href="#%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0"></a>
+项目概述
+</h2><p>XZai是一个基于Python开发的智能对话系统，采用ChatterBot框架构建，具备知识学习能力和个性化训练功能。该系统不仅能进行自然语言对话，还能通过用户训练不断扩展知识库，最终成为专属于用户的AI伙伴。</p>
+<p><a href="https://github.com/li958633/XZai_Customizeyourfriends">XZai项目仓库</a></p>
+<h2 id="核心功能详解">
+<a class="header-anchor" href="#%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd%e8%af%a6%e8%a7%a3"></a>
+核心功能详解
+</h2><h3 id="1-智能对话系统">
+<a class="header-anchor" href="#1-%e6%99%ba%e8%83%bd%e5%af%b9%e8%af%9d%e7%b3%bb%e7%bb%9f"></a>
+1. 智能对话系统
+</h3><ul>
+<li><strong>多轮对话支持</strong>：基于ChatterBot框架实现上下文感知的对话能力</li>
+<li><strong>混合响应策略</strong>：结合规则匹配和机器学习生成回答</li>
+<li><strong>特殊指令处理</strong>：支持&quot;train:open&quot;或&quot;train:opening file&quot;指令进入训练模式</li>
+</ul>
+<h3 id="2-知识训练系统">
+<a class="header-anchor" href="#2-%e7%9f%a5%e8%af%86%e8%ae%ad%e7%bb%83%e7%b3%bb%e7%bb%9f"></a>
+2. 知识训练系统
+</h3><ul>
+<li><strong>交互式训练</strong>：通过对话框逐步引导用户输入问答对</li>
+<li><strong>批量导入</strong>：支持从JSON文件导入结构化训练数据</li>
+<li><strong>多格式兼容</strong>：
+<ul>
+<li>标准问答格式：<code>{&quot;question&quot;:&quot;...&quot;,&quot;answer&quot;:&quot;...&quot;}</code></li>
+<li>任务型格式：<code>{&quot;input&quot;:&quot;...&quot;,&quot;target&quot;:&quot;...&quot;}</code></li>
+<li>选择题格式：包含<code>answer_choices</code>字段</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-主题管理系统">
+<a class="header-anchor" href="#3-%e4%b8%bb%e9%a2%98%e7%ae%a1%e7%90%86%e7%b3%bb%e7%bb%9f"></a>
+3. 主题管理系统
+</h3><ul>
+<li><strong>系统主题检测</strong>：通过Windows注册表自动获取当前系统主题设置</li>
+<li><strong>平滑过渡动画</strong>：使用Canvas实现的淡入淡出效果</li>
+<li><strong>实时切换</strong>：支持亮色/暗色模式一键切换</li>
+</ul>
+<h3 id="4-语义处理能力">
+<a class="header-anchor" href="#4-%e8%af%ad%e4%b9%89%e5%a4%84%e7%90%86%e8%83%bd%e5%8a%9b"></a>
+4. 语义处理能力
+</h3><ul>
+<li><strong>相似问题匹配</strong>：基于difflib的模糊匹配算法</li>
+<li><strong>问答映射表</strong>：构建问题-答案的快速检索索引</li>
+<li><strong>响应选择策略</strong>：采用最高频响应选择方法</li>
+</ul>
+<h2 id="技术实现细节">
+<a class="header-anchor" href="#%e6%8a%80%e6%9c%af%e5%ae%9e%e7%8e%b0%e7%bb%86%e8%8a%82"></a>
+技术实现细节
+</h2><h3 id="代码架构">
+<a class="header-anchor" href="#%e4%bb%a3%e7%a0%81%e6%9e%b6%e6%9e%84"></a>
+代码架构
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">classDiagram</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">ThemeTransition</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">setup_animation_window</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">run_animation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">fade_animation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">EnhancedChatApplication</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">setup_chatbot</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">train_chatbot</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">build_qa_mapping</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">find_similar_question</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">+</span><span class="n">process_message</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">ThemeTransition</span> <span class="o">--&gt;</span> <span class="n">EnhancedChatApplication</span> <span class="p">:</span> <span class="n">提供动画支持</span>
+</span></span></code></pre></div><h3 id="关键技术点">
+<a class="header-anchor" href="#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af%e7%82%b9"></a>
+关键技术点
+</h3><ol>
+<li>
+<p><strong>数据库连接</strong>：</p>
+<p>python</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">database_uri</span><span class="o">=</span><span class="s2">&#34;sqlite:///win11_chatbot_db.sqlite3&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>逻辑适配器配置</strong>：</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>EasyDesktop - 您的桌面伴侣</title>
+      <link>https://li958634.github.io/dmxzweb/post/easydesktop---%E6%82%A8%E7%9A%84%E6%A1%8C%E9%9D%A2%E4%BC%B4%E4%BE%A3/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/easydesktop---%E6%82%A8%E7%9A%84%E6%A1%8C%E9%9D%A2%E4%BC%B4%E4%BE%A3/</guid>
+      <description>
+        <![CDATA[<h1>EasyDesktop - 您的桌面伴侣</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <h1 id="easydesktop---您的桌面伴侣">
+<a class="header-anchor" href="#easydesktop---%e6%82%a8%e7%9a%84%e6%a1%8c%e9%9d%a2%e4%bc%b4%e4%be%a3"></a>
+EasyDesktop - 您的桌面伴侣
+</h1><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">✨</span> <span class="o">**</span><span class="n">让整洁桌面与高效操作完美共存</span><span class="o">**</span> <span class="err">✨</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">隐藏桌面图标</span><span class="err">，</span><span class="n">但不隐藏便捷性</span><span class="err">！</span><span class="o">**</span> <span class="n">EasyDesktop</span> <span class="n">是一款创新的桌面增强工具</span>
+</span></span><span class="line"><span class="cl"><span class="n">让您在保持桌面整洁美观的同时</span><span class="err">，</span><span class="n">快速访问桌面文件</span><span class="err">。</span><span class="n">只需将鼠标移至屏幕左下角</span><span class="err">，</span><span class="n">即可呼出智能文件面板</span><span class="err">！</span>
+</span></span></code></pre></div><p><a href="https://gitee.com/codevicent/easy-desktop">EasyDesktop: 一个桌面增强工具，旨在让你隐藏桌面图标的同时不影响桌面文件使用的快捷性，并提升桌面美观程度。</a></p>
+<h2 id="-开发信息">
+<a class="header-anchor" href="#-%e5%bc%80%e5%8f%91%e4%bf%a1%e6%81%af"></a>
+🔧 开发信息
+</h2><blockquote>
+<p>[!IMPORTANT]</p>
+<p>软件使用pywebview开发，界面使用html+css+js实现，实际操作（如打开文件、新建文件等）由python实现（js通过pywebview调用）</p>
+<p>特别感谢<a href="https://gitee.com/ALX4890">@CassianVale</a>对代码进行了模块化重构，感谢大佬！</p></blockquote>
+<h2 id="-核心功能">
+<a class="header-anchor" href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd"></a>
+✨ 核心功能
+</h2><h3 id="-快捷呼出与布局">
+<a class="header-anchor" href="#-%e5%bf%ab%e6%8d%b7%e5%91%bc%e5%87%ba%e4%b8%8e%e5%b8%83%e5%b1%80"></a>
+🖥️ 快捷呼出与布局
+</h3><ul>
+<li><strong>角落触发</strong>：鼠标移至左下角即可呼出面板</li>
+<li><strong>双视图模式</strong>：网格布局（默认）与列表布局自由切换</li>
+<li><strong>深度文件操作</strong>：
+<ul>
+<li>新建文件（docx/xlsx/pptx/txt/文件夹）</li>
+<li>重命名/删除文件</li>
+<li>粘贴剪切板文件（支持资源管理器复制内容）</li>
+<li>单击打开文件，双击在资源管理器显示</li>
+<li>单击进入文件夹，双击在资源管理器打开</li>
+</ul>
+</li>
+</ul>
+<h3 id="-极速查找">
+<a class="header-anchor" href="#-%e6%9e%81%e9%80%9f%e6%9f%a5%e6%89%be"></a>
+🔍 极速查找
+</h3><ul>
+<li><strong>智能过滤</strong>：输入文件名、拼音首字母或全拼实时搜索</li>
+<li><strong>模糊匹配</strong>：忽略大小写和标点符号</li>
+<li><strong>快速搜索</strong>：在当前目录进行快速搜索</li>
+</ul>
+<h3 id="-个性化主题">
+<a class="header-anchor" href="#-%e4%b8%aa%e6%80%a7%e5%8c%96%e4%b8%bb%e9%a2%98"></a>
+🎨 个性化主题
+</h3><ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">多主题支持</span><span class="o">**</span><span class="err">：</span><span class="n">浅色</span><span class="o">/</span><span class="n">深色</span><span class="o">/</span><span class="mi">3</span><span class="n">Z</span> <span class="n">三种主题</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">系统跟随</span><span class="o">**</span><span class="err">：</span><span class="n">自动匹配系统主题切换</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">高级自定义</span><span class="o">**</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">自定义背景图片</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">磨砂效果强度调节</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">自行选择使用全屏模式或窗口模式</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">窗口模式下窗口大小可调节并记录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">⚙️</span> <span class="n">便捷设置</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">开机自启</span><span class="o">**</span><span class="err">：</span><span class="n">一次设置</span><span class="err">，</span><span class="n">永久自动运行</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">零配置使用</span><span class="o">**</span><span class="err">：</span><span class="n">下载即用</span><span class="err">，</span><span class="n">无需复杂安装</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="-快速开始">
+<a class="header-anchor" href="#-%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b"></a>
+🚀 快速开始
+</h2><ol>
+<li><strong>下载软件</strong>：请在右侧的发行版中获取最新版软件！</li>
+<li><strong>运行程序</strong>：解压后双击 <code>easyDesktop.exe</code> 即可启动</li>
+<li><strong>基本操作</strong>：
+<ul>
+<li>鼠标移至左下角呼出面板</li>
+<li>右键菜单进行文件操作</li>
+<li>右上角设置按钮进行个性化配置</li>
+</ul>
+</li>
+<li><strong>设置自启</strong>：设置中勾选&quot;开机自启动&quot;</li>
+</ol>
+<h2 id="-贡献指南">
+<a class="header-anchor" href="#-%e8%b4%a1%e7%8c%ae%e6%8c%87%e5%8d%97"></a>
+🤝 贡献指南
+</h2><blockquote>
+<p>[!NOTE]</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+        <category>windows</category><category>程序</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>CPU 压榨机——介绍及下载</title>
+      <link>https://li958634.github.io/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:42 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</guid>
+      <description>
+        <![CDATA[<h1>CPU 压榨机——介绍及下载</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <blockquote>
+<ul>
+<li>
+<h3 id="cpu压榨机---业余级cpu性能测试工具">
+<a class="header-anchor" href="#cpu%e5%8e%8b%e6%a6%a8%e6%9c%ba---%e4%b8%9a%e4%bd%99%e7%ba%a7cpu%e6%80%a7%e8%83%bd%e6%b5%8b%e8%af%95%e5%b7%a5%e5%85%b7"></a>
+CPU压榨机 - 业余级CPU性能测试工具
+</h3><h4 id="一功能与特点">
+<a class="header-anchor" href="#%e4%b8%80%e5%8a%9f%e8%83%bd%e4%b8%8e%e7%89%b9%e7%82%b9"></a>
+一、功能与特点
+</h4><ol>
+<li><strong>核心功能</strong></li>
+</ol>
+</li>
+<li>
+<p>多线程压力测试：支持全核心满载测试，可自定义线程数</p>
+</li>
+<li>
+<p>实时监控：动态显示CPU使用率，可视化进度条</p>
+</li>
+<li>
+<p>参数调节：可设置测试持续时间、计算速度和最大CPU占用率</p>
+</li>
+<li>
+<p>安全机制：提供正常停止和紧急停止双保险</p>
+<p>2.<strong>特色功能</strong></p>
+</li>
+<li>
+<p>主题切换：支持深色/浅色/系统三种主题模式</p>
+</li>
+<li>
+<p>日志系统：完整记录测试过程，支持日志清除</p>
+</li>
+<li>
+<p>可视化界面：采用Modern UI设计，操作直观</p>
+</li>
+<li>
+<p>硬件检测：自动识别CPU核心数量</p>
+</li>
+</ul>
+<h4 id="二代码解析">
+<a class="header-anchor" href="#%e4%ba%8c%e4%bb%a3%e7%a0%81%e8%a7%a3%e6%9e%90"></a>
+二、代码解析
+</h4><ol>
+<li><strong>核心算法</strong></li>
+</ol>
+<p>python</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="k">def</span> <span class="nf">cpu_stress_worker</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">speed_factor</span><span class="p">,</span> <span class="n">max_usage</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 数学运算核心</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cycles</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_usage</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cycles</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">     <span class="c1"># 精确控制计算间隔</span>
+</span></span><span class="line"><span class="cl">     <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="n">elapsed</span> <span class="o">&lt;</span> <span class="n">sleep_time</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span> <span class="o">-</span> <span class="n">elapsed</span><span class="p">)</span>
+</span></span></code></pre></div><ol>
+<li><strong>架构设计</strong></li>
+</ol>
+<ul>
+<li>
+<p>前端：CustomTkinter构建的现代化GUI，win11样式</p>
+</li>
+<li>
+<p>后端：multiprocessing多进程压力测试</p>
+</li>
+<li>
+<p>监控：psutil实时获取CPU数据</p>
+</li>
+<li>
+<p>日志：CTkTextbox实现的滚动日志系统</p>
+<ol start="2">
+<li><strong>关键技术点</strong></li>
+</ol>
+</li>
+<li>
+<p>进程管理：通过multiprocessing.Process创建测试进程</p>
+</li>
+<li>
+<p>事件控制：使用Event对象实现进程同步</p>
+</li>
+<li>
+<p>资源监控：定时器轮询机制更新UI状态</p>
+</li>
+<li>
+<p>异常处理：完善的错误捕获和提示机制</p>
+</li>
+</ul>
+<h4 id="三使用指南">
+<a class="header-anchor" href="#%e4%b8%89%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97"></a>
+三、使用指南
+</h4><ol>
+<li>
+<p><strong>操作流程</strong></p>
+</li>
+<li>
+<p>设置测试参数：</p>
+<ul>
+<li>持续时间（秒）
+<ul>
+<li>线程数（默认全核心）</li>
+</ul>
+</li>
+<li>最大CPU占用率</li>
+</ul>
+<p>2.启动测试：</p>
+<ul>
+<li>
+<p>点击&quot;开始压力测试&quot;</p>
+</li>
+<li>
+<p>确认警告信息</p>
+<p>3.监控状态：</p>
+<ul>
+<li>实时查看CPU使用率</li>
+</ul>
+</li>
+<li>
+<p>观察日志输出</p>
+<p>4.停止测试：</p>
+<ul>
+<li>正常停止：等待完成或手动停止</li>
+</ul>
+</li>
+<li>
+<p>紧急停止：立即终止所有进程</p>
+</li>
+</ul>
+<p><strong>界面说明</strong></p>
+<ul>
+<li>仪表盘：核心监控区域，显示CPU状态</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>测试日志：记录所有测试事件</li>
+<li>系统设置：查看硬件信息和默认配置
+<ul>
+<li>关于页面：开发者信息和项目链接</li>
+</ul>
+</li>
+</ul>
+<h4 id="四注意事项">
+<a class="header-anchor" href="#%e5%9b%9b%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9"></a>
+四、注意事项
+</h4><pre><code> 1. **安全警告**
+ ❗ 高负载可能导致：
+
+ - CPU温度急剧升高
+</code></pre>
+<ul>
+<li>
+<p>系统响应迟缓</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>

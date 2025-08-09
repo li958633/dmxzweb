@@ -1,0 +1,61 @@
+[
+  {
+    "objectID": "25f389e5b284dda1dd4d8351953cfdeda87ebc44",
+    "permalink": "/dmxzweb/post/xzai2.0---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/",
+    "title": "XZai 2.0 - 训练独属于你的AI朋友","content": " XZai 2.0 - 训练独属于你的AI朋友 核心升级亮点 本地模型：基于ChatterBot的增强版本地对话引擎 云API支持：集成OpenAI/DeepSeek/Kimi/Claude/Gemini五大AI服务 智能路由：根据查询内容自动选择最优响应来源 历史记录：支持模糊搜索记录 关键技术栈 graph TD A[前端界面] --\u0026gt; B[ttkbootstrap主题引擎] A --\u0026gt; C[Win32API特效集成] B --\u0026gt; D[亚克力/阴影/圆角效果] C --\u0026gt; E[系统主题检测] F[后端核心] --\u0026gt; G[多模型路由] G --\u0026gt; H[本地ChatterBot] G --\u0026gt; I[云API适配层] H --\u0026gt; J[Levenshtein语义匹配] I --\u0026gt; K[HTTP请求池] 核心功能模块 1. 智能对话系统 混合响应引擎：\npython\ndef get_bot_response(self, message): if self.config[\u0026#34;api_settings\u0026#34;][\u0026#34;active_model\u0026#34;] == \u0026#34;local\u0026#34;: # 本地语义匹配 similar_question = self.find_similar_question(message) return self.qa_mapping.get(similar_question) or str(self.chatbot.get_response(message)) else: # 云API调用 return self.call_api_model(message) 2. 专业训练体系 多格式兼容：支持标准QA对/分类任务/阅读理解数据 批量导入：智能JSON解析与错误修复 实时反馈：训练过程可视化监控 3. 企业级功能 配置中心：API密钥管理系统 数据持久化：自动备份与版本控制 跨会话管理：对话历史检索与导出 使用规范 运行要求 bash\n# 基础依赖 pip install chatterbot==1.0.5 sv-ttk pywin32 ttkbootstrap requests pillow # 硬件建议 CPU: i5及以上 内存: 8GB+ 系统: Windows 10/11 数据安全 配置文件加密存储于config.json 训练数据自动备份机制 API密钥内存隔离处理 开发接口 python\n# 自定义模型接入示例 def add_custom_model(self, model_name, config): self.config[\u0026#34;api_settings\u0026#34;][model_name] = config self.save_config() 性能指标 模块 响应时间 并发能力 本地引擎 \u0026lt;200ms 10+会话 API调用 1-3s 异步队列 历史检索 即时 万级数据 注意事项 云API调用需自行申请密钥 首次启动会初始化本地数据库 建议定期清理win11_chatbot_db.sqlite3 暗黑模式需Windows 1903+支持 下载地址\nXZai项目仓库\n","date": "2025-08-08 15:14:42",
+    "updated": "2025-08-08 15:14:42"
+  }, 
+  {
+    "objectID": "a356cddd68cf4994691335b152525783f78414f4",
+    "permalink": "/dmxzweb/post/2025.8.3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/",
+    "title": "2025.8.3更新日志","content": " ✨ 2025.8.3 更新内容 ### 1. 音乐播放器更新（东方歌单） - 新增东方Project官方音乐合集歌单 - 支持后台自动播放（音量已优化） - 播放器UI适配暗黑模式 [!IMPORTANT]\n2. 评论系统升级（Giscus） 全面启用GitHub讨论区的Giscus评论系统 支持Markdown语法和表情回复 登录GitHub即可参与互动 ### 3. 文章版权声明 - 全站启用CC BY-NC-SA 4.0许可证 - 文章底部新增版权信息卡： ### 4. 网页平滑切换（PJAX） - 全站启用无刷新页面加载技术 - 保留音乐播放器连续播放状态 - 加载动画优化为「御币旋转」特效 ### 5. 多语言支持：简体中文，英文，日语（语言功能并不完善） --- \u0026gt; 如有任何问题，欢迎在评论区反馈~ \u0026gt; **少女祈祷中...** \u0026gt; @ 代码小梓 \u0026gt; *2025年8月3日* ","date": "2025-08-03 11:14:48",
+    "updated": "2025-08-03 11:14:48"
+  }, 
+  {
+    "objectID": "755387371d6362a1ad46d5fba90bc88efb9ccdab",
+    "permalink": "/dmxzweb/post/250+%E7%97%85%E6%AF%92%E6%A0%B7%E6%9C%AC%E5%AE%9E%E6%B5%8B%E5%9B%9B%E6%AC%BE%E4%B8%BB%E6%B5%81%E6%9D%80%E8%BD%AF%E8%B0%81%E6%89%8D%E6%98%AF%E6%89%AB%E6%8F%8F%E4%B9%8B%E7%8E%8B/",
+    "title": "250+病毒样本实测！四款主流杀软谁才是扫描之王？","content": " [!IMPORTANT]\nMore info250+病毒包下载地址 访问密码:caizi 压缩包密码：infected\n视频内杀毒软件下载地址： 1.https://www.huorong.cn 2.https://sd.360.cn 3.https://stgsem.2345.com/ruanjian/by/index.html?id=60897\u0026amp;msclkid=1b86088791fe11dfbfbb6017f1aa9b19 4.https://young.duba.net/?f=3 More info: 欢迎大家来我的哔哩哔哩主页游玩qwq！\n可以与我一起玩游戏，我的QQ：1931688073\n也可以加入我们的交流群：显石的编程交流群新群：975725732\n以及我没什么人气的交流群：1038340746\n欢迎大家来玩！！！\tqwq\n","date": "2025-08-03 11:14:48",
+    "updated": "2025-08-03 11:14:48"
+  }, 
+  {
+    "objectID": "640cc9d32e604155c50ea0b413968c060c96921d",
+    "permalink": "/dmxzweb/post/easydesktop---%E6%82%A8%E7%9A%84%E6%A1%8C%E9%9D%A2%E4%BC%B4%E4%BE%A3/",
+    "title": "EasyDesktop - 您的桌面伴侣","content": " EasyDesktop - 您的桌面伴侣 ✨ **让整洁桌面与高效操作完美共存** ✨ **隐藏桌面图标，但不隐藏便捷性！** EasyDesktop 是一款创新的桌面增强工具 让您在保持桌面整洁美观的同时，快速访问桌面文件。只需将鼠标移至屏幕左下角，即可呼出智能文件面板！ EasyDesktop: 一个桌面增强工具，旨在让你隐藏桌面图标的同时不影响桌面文件使用的快捷性，并提升桌面美观程度。\n🔧 开发信息 [!IMPORTANT]\n软件使用pywebview开发，界面使用html+css+js实现，实际操作（如打开文件、新建文件等）由python实现（js通过pywebview调用）\n特别感谢@CassianVale对代码进行了模块化重构，感谢大佬！\n✨ 核心功能 🖥️ 快捷呼出与布局 角落触发：鼠标移至左下角即可呼出面板 双视图模式：网格布局（默认）与列表布局自由切换 深度文件操作： 新建文件（docx/xlsx/pptx/txt/文件夹） 重命名/删除文件 粘贴剪切板文件（支持资源管理器复制内容） 单击打开文件，双击在资源管理器显示 单击进入文件夹，双击在资源管理器打开 🔍 极速查找 智能过滤：输入文件名、拼音首字母或全拼实时搜索 模糊匹配：忽略大小写和标点符号 快速搜索：在当前目录进行快速搜索 🎨 个性化主题 - **多主题支持**：浅色/深色/3Z 三种主题 - **系统跟随**：自动匹配系统主题切换 - **高级自定义**： - 自定义背景图片 - 磨砂效果强度调节 - 自行选择使用全屏模式或窗口模式 - 窗口模式下窗口大小可调节并记录 ⚙️ 便捷设置 - **开机自启**：一次设置，永久自动运行 - **零配置使用**：下载即用，无需复杂安装 ## 🚀 快速开始 下载软件：请在右侧的发行版中获取最新版软件！ 运行程序：解压后双击 easyDesktop.exe 即可启动 基本操作： 鼠标移至左下角呼出面板 右键菜单进行文件操作 右上角设置按钮进行个性化配置 设置自启：设置中勾选\u0026quot;开机自启动\u0026quot; 🤝 贡献指南 [!NOTE]\n我们欢迎各种形式的贡献！如果您想：\n报告问题或建议新功能 提交代码改进 完善文档 欢迎提交 Pull Request！喵。\n程序贡献者及程序作者 程序作者：维轩Vicent B站主页：维轩Vicent的个人空间-维轩Vicent个人主页-哔哩哔哩视频\n其他贡献者:CassianVale gitee主页：CassianVale (ALX4890) - Gitee.com\n文章作者：代码小梓 B站主页：代码小梓的个人空间-代码小梓个人主页-哔哩哔哩视频 QQ：1931688073\nEasyDesktop项目开源仓库 EasyDesktop: 一个桌面增强工具，旨在让你隐藏桌面图标的同时不影响桌面文件使用的快捷性，并提升桌面美观程度。只需要把鼠标移到左下角，开启桌面使用新体验！隐藏了桌面图标也能轻松访问桌面！ 企鹅群：2156028040\n如果喜欢这个项目，请点个 Star 支持一下呀！\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "48a4e252e38d1765683e56b54b89966ff8067e7e",
+    "permalink": "/dmxzweb/post/xzai---%E8%AE%AD%E7%BB%83%E7%8B%AC%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84ai%E6%9C%8B%E5%8F%8B/",
+    "title": "XZai - 训练独属于你的AI朋友","content": " XZai - 训练独属于你的AI朋友 项目概述 XZai是一个基于Python开发的智能对话系统，采用ChatterBot框架构建，具备知识学习能力和个性化训练功能。该系统不仅能进行自然语言对话，还能通过用户训练不断扩展知识库，最终成为专属于用户的AI伙伴。\nXZai项目仓库\n核心功能详解 1. 智能对话系统 多轮对话支持：基于ChatterBot框架实现上下文感知的对话能力 混合响应策略：结合规则匹配和机器学习生成回答 特殊指令处理：支持\u0026quot;train:open\u0026quot;或\u0026quot;train:opening file\u0026quot;指令进入训练模式 2. 知识训练系统 交互式训练：通过对话框逐步引导用户输入问答对 批量导入：支持从JSON文件导入结构化训练数据 多格式兼容： 标准问答格式：{\u0026quot;question\u0026quot;:\u0026quot;...\u0026quot;,\u0026quot;answer\u0026quot;:\u0026quot;...\u0026quot;} 任务型格式：{\u0026quot;input\u0026quot;:\u0026quot;...\u0026quot;,\u0026quot;target\u0026quot;:\u0026quot;...\u0026quot;} 选择题格式：包含answer_choices字段 3. 主题管理系统 系统主题检测：通过Windows注册表自动获取当前系统主题设置 平滑过渡动画：使用Canvas实现的淡入淡出效果 实时切换：支持亮色/暗色模式一键切换 4. 语义处理能力 相似问题匹配：基于difflib的模糊匹配算法 问答映射表：构建问题-答案的快速检索索引 响应选择策略：采用最高频响应选择方法 技术实现细节 代码架构 classDiagram class ThemeTransition{ +start() +setup_animation_window() +run_animation() +fade_animation() } class EnhancedChatApplication{ +setup_chatbot() +train_chatbot() +build_qa_mapping() +find_similar_question() +process_message() } ThemeTransition --\u0026gt; EnhancedChatApplication : 提供动画支持 关键技术点 数据库连接：\npython\ndatabase_uri=\u0026#34;sqlite:///win11_chatbot_db.sqlite3\u0026#34; 逻辑适配器配置：\npython\nlogic_adapters=[ { \u0026#34;import_path\u0026#34;: \u0026#34;chatterbot.logic.BestMatch\u0026#34;, \u0026#34;maximum_similarity_threshold\u0026#34;: 0.85, \u0026#34;response_selection_method\u0026#34;: get_most_frequent_response, \u0026#34;statement_comparison_function\u0026#34;: LevenshteinDistance } ] 窗口特效实现：\npython\nDWMWA_WINDOW_CORNER_PREFERENCE = 33 DWM_WINDOW_CORNER_ROUND = 2 ctypes.windll.dwmapi.DwmSetWindowAttribute(...) 使用指南 安装与运行 安装依赖：\nbash\npip install chatterbot==1.0.5 sv-ttk pywin32 运行程序：\nbash\npython XZai.py 训练模式操作流程 通过按钮或输入train:open进入训练模式 按照提示输入问题和答案 输入\u0026quot;退出\u0026quot;结束训练 训练数据自动保存到xunlian.json 批量训练步骤 准备JSON格式训练文件 点击\u0026quot;训练模式\u0026quot;按钮 选择\u0026quot;从JSON文件训练\u0026quot; 选择训练文件并确认 注意事项 数据安全 程序会自动备份损坏的JSON文件，备份名称为xunlian_bak_\u0026lt;时间戳\u0026gt;.json 建议定期备份xunlian.json和win11_chatbot_db.sqlite3文件 常见问题处理 JSON解析错误：程序会自动尝试修复常见格式问题 训练失败：检查问题是否包含特殊字符 主题切换异常：可能是系统权限问题导致无法读取注册表 下载地址\nXZai项目仓库\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "2e4a53d82afe67162c22c514f0842c87a3f2ea00",
+    "permalink": "/dmxzweb/post/%E6%AC%A2%E8%BF%8E%E8%BF%9B%E5%85%A5%E6%88%91%E7%9A%84%E7%BD%91%E7%AB%99qwq/",
+    "title": "欢迎进入我的网站QWQ","content": "More info: 欢迎大家来我的哔哩哔哩主页游玩qwq！\n可以与我一起玩游戏，我的QQ：1931688073\n也可以加入我们的交流群：显石的编程交流群 二群：975725732\n显石的编程交流群 大群：1037744097\n以及我没什么人气的交流群：1038340746\n欢迎大家来玩！！！\tqwq\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "432f5af77e56e9176161e324564fa081497ed2eb",
+    "permalink": "/dmxzweb/post/%E5%86%85%E5%AD%98%E5%8E%8B%E6%A6%A8%E5%99%A8%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/",
+    "title": "内存压榨器介绍及下载","content": "# Memory Squeezer - 内存压榨器 ## 简介 Memory Squeezer 是一个用于测试系统内存性能的工具，可以模拟高内存使用场景，帮助开发者测试应用程序在内存压力下的表现。 ## 功能特性 - ✅ 单线程和多进程内存压榨模式 - ✅ 可配置的内存块大小和分配速度 - ✅ 实时内存状态监控 - ✅ 四重安全确认机制防止误操作 - ✅ 内存安全限制保护 - ✅ 详细的日志记录 - ✅ 支持多种主题风格 ## 系统要求 - windows10 + - 建议内存大小4GB+(避免因为内存过小，程序写入速度过快导致系统问题！) ## 安装 1. 克隆仓库或下载源代码 ```bash git clone https://github.com/yourusername/memory-squeezer.git cd memory-squeezer 注：本文作者及程序作者不承担此程序造成的任何问题！！！！！！！ 程序作者QQ：640384548 使用方法 基本使用 运行程序 python memory_squeezer.py 点击\u0026quot;开始压榨\u0026quot;按钮启动内存压榨 观察内存使用情况和进度 使用\u0026quot;安全停止\u0026quot;或\u0026quot;紧急停止\u0026quot;结束压榨 配置选项 程序会自动创建 config.ini 配置文件，您可以修改以下参数：\n[Settings] BlockSize=10 ; 内存块大小(MB) AllocationsPerSecond=500 ; 每秒分配次数 ReservePercent=2 ; 保留内存百分比 MemoryLimit=256 ; 内存安全限制(MB) UseMultiprocessing=false ; 是否使用多进程 WorkerProcesses=4 ; 工作进程数 [Window] Width=600 ; 窗口宽度 Height=500 ; 窗口高度 [Theme] Theme=Light ; 主题风格 ProgressBarColor=0,128,255 ; 进度条颜色(RGB) [Logging] LogFile=memory_squeezer.log ; 日志文件路径 LogLevel=INFO ; 日志级别 注意事项 ⚠️ 重要警告 此程序会消耗大量系统内存，可能导致系统不稳定！使用时请确保：\n已保存所有工作 了解操作风险 系统有足够的内存资源 程序依赖： PyQt5 psutil More info:内存压榨器源码仓库\nMore info:内存压榨器.exe 密码：c9ng\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "d93e82d3bab9924d1f6967a358d9e7ef3d44bd12",
+    "permalink": "/dmxzweb/post/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/",
+    "title": "实用工具","content": "More info:菜梓-用户账户管理工具 64位\nMore info:菜梓-用户账户管理工具 32位\nMore info:VM安全启动问题修复工具\n注：所有程序的访问密码是：caizi\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "3a9e17766206a268488333ea4645b245be22322a",
+    "permalink": "/dmxzweb/post/%E6%89%80%E6%9C%89%E7%97%85%E6%AF%92%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/",
+    "title": "所有病毒下载地址","content": "More info: sys.exe病毒\nMore info:NO escape病毒\nMore info:System destruction病毒\nMore info:锁机病毒\nMore info1980-1999病毒库大全3500+\n注：所有病毒的访问密码是：caizi\n","date": "2025-08-01 15:14:48",
+    "updated": "2025-08-01 15:14:48"
+  }, 
+  {
+    "objectID": "ec6325cdc09bc87be19f60b3b1ea4d6e991d0772",
+    "permalink": "/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/",
+    "title": "CPU 压榨机——介绍及下载","content": " CPU压榨机 - 业余级CPU性能测试工具 一、功能与特点 核心功能 多线程压力测试：支持全核心满载测试，可自定义线程数\n实时监控：动态显示CPU使用率，可视化进度条\n参数调节：可设置测试持续时间、计算速度和最大CPU占用率\n安全机制：提供正常停止和紧急停止双保险\n2.特色功能\n主题切换：支持深色/浅色/系统三种主题模式\n日志系统：完整记录测试过程，支持日志清除\n可视化界面：采用Modern UI设计，操作直观\n硬件检测：自动识别CPU核心数量\n二、代码解析 核心算法 python\ndef cpu_stress_worker(duration, speed_factor, max_usage, stop_event): # 数学运算核心 cycles = int(10000 * (max_usage / 100)) for _ in range(cycles): result = sum(i * i for i in range(100)) # 精确控制计算间隔 elapsed = time.time() - start if elapsed \u0026lt; sleep_time: time.sleep(sleep_time - elapsed) 架构设计 前端：CustomTkinter构建的现代化GUI，win11样式\n后端：multiprocessing多进程压力测试\n监控：psutil实时获取CPU数据\n日志：CTkTextbox实现的滚动日志系统\n关键技术点 进程管理：通过multiprocessing.Process创建测试进程\n事件控制：使用Event对象实现进程同步\n资源监控：定时器轮询机制更新UI状态\n异常处理：完善的错误捕获和提示机制\n三、使用指南 操作流程\n设置测试参数：\n持续时间（秒） 线程数（默认全核心） 最大CPU占用率 2.启动测试：\n点击\u0026quot;开始压力测试\u0026quot;\n确认警告信息\n3.监控状态：\n实时查看CPU使用率 观察日志输出\n4.停止测试：\n正常停止：等待完成或手动停止 紧急停止：立即终止所有进程\n界面说明\n仪表盘：核心监控区域，显示CPU状态 测试日志：记录所有测试事件 系统设置：查看硬件信息和默认配置 关于页面：开发者信息和项目链接 四、注意事项 1. **安全警告** ❗ 高负载可能导致： - CPU温度急剧升高 系统响应迟缓\n风扇高速运转\n笔记本电脑电池快速耗电 2.使用建议\n建议持续时间不超过30分钟 保持良好散热环境\n笔记本用户建议连接电源 避免与其他高负载程序同时运行\n3.技术限制\n无法精确控制单个核心负载\n测试结果受散热条件影响\n部分低功耗CPU可能无法达到100%负载\n五、开发背景 技术栈选择 GUI框架：CustomTkinter（基于Tkinter的现代化封装） 多进程：Python标准库multiprocessing 系统监控：psutil跨平台库 打包工具：建议使用PyInstaller 2.设计理念\n用户友好：直观的操作界面 安全第一：多重防护机制 代码规范：遵循PEP8标准 可扩展性：模块化设计 六、进阶使用 **开发者模式\u0026quot; 可通过修改config字典调整默认参数：\npython\nself.config = { \u0026#34;cpu_threads\u0026#34;: multiprocessing.cpu_count(), \u0026#34;stress_speed\u0026#34;: 100, # 可调整为50-200 \u0026#34;max_cpu_usage\u0026#34;: 100 # 可调整为1-100 } 七、常见问题 Q: 测试时系统卡顿怎么办？ A: 立即停止测试\nQ: 程序无法启动可能原因？ A: 检查Python环境是否安装psutil和customtkinter库等\nQ: 如何长期监控CPU性能？ A: 建议使用专业监控软件，本工具适合短时压力测试\n八、技术展望 社区共建 欢迎开发者通过以下方式参与： 提交Pull Request 报告Issues 完善文档 分享测试案例 九、免责声明 本工具仅供技术测试使用 因使用不当造成的硬件损坏概不负责 禁止用于非法用途 项目地址：CPU压榨机的Github仓库\n技术支持QQ：1931688073\nB站主页：代码小梓的个人空间\n蓝奏云网盘下载：cpu压榨机下载 密码:caizi\n","date": "2025-08-01 15:14:42",
+    "updated": "2025-08-01 15:14:42"
+  }]

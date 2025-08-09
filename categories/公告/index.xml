@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>公告 on 代码小梓-コード小梓</title>
+    <link>https://li958634.github.io/dmxzweb/categories/%E5%85%AC%E5%91%8A/</link>
+    <description>Recent content from 代码小梓-コード小梓</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>14706825732@163.com (代码小梓)</managingEditor>
+    <webMaster>14706825732@163.com (代码小梓)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Sun, 03 Aug 2025 11:14:48 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://li958634.github.io/dmxzweb/categories/%E5%85%AC%E5%91%8A/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>2025.8.3更新日志</title>
+      <link>https://li958634.github.io/dmxzweb/post/2025.8.3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Sun, 03 Aug 2025 11:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/2025.8.3%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+      <description>
+        <![CDATA[<h1>2025.8.3更新日志</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <h2 id="-202583-更新内容">
+<a class="header-anchor" href="#-202583-%e6%9b%b4%e6%96%b0%e5%86%85%e5%ae%b9"></a>
+✨ 2025.8.3 更新内容
+</h2><ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 1. 音乐播放器更新（东方歌单）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 新增东方Project官方音乐合集歌单
+</span></span><span class="line"><span class="cl">- 支持后台自动播放（音量已优化）
+</span></span><span class="line"><span class="cl">- 播放器UI适配暗黑模式
+</span></span></code></pre></div></li>
+</ul>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<h3 id="2-评论系统升级giscus">
+<a class="header-anchor" href="#2-%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9f%e5%8d%87%e7%ba%a7giscus"></a>
+2. 评论系统升级（Giscus）
+</h3><ul>
+<li>全面启用GitHub讨论区的Giscus评论系统</li>
+<li>支持Markdown语法和表情回复</li>
+<li>登录GitHub即可参与互动</li>
+</ul></blockquote>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 3. 文章版权声明
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- 全站启用CC BY-NC-SA 4.0许可证
+</span></span><span class="line"><span class="cl">- 文章底部新增版权信息卡：
+</span></span></code></pre></div></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### 4. 网页平滑切换（PJAX）
+</span></span><span class="line"><span class="cl">- 全站启用无刷新页面加载技术
+</span></span><span class="line"><span class="cl">- 保留音乐播放器连续播放状态
+</span></span><span class="line"><span class="cl">- 加载动画优化为「御币旋转」特效
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### 5. 多语言支持：简体中文，英文，日语（语言功能并不完善）
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; 如有任何问题，欢迎在评论区反馈~  
+</span></span><span class="line"><span class="cl">&gt; **少女祈祷中...**  
+</span></span><span class="line"><span class="cl">&gt; @ 代码小梓  
+</span></span><span class="line"><span class="cl">&gt; *2025年8月3日*
+</span></span></code></pre></div>
+        
+        <hr><p>本文2025-08-03首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-03</p>]]>
+      </description>
+      
+        <category>公告</category>
+      
+    </item>
+    
+  </channel>
+</rss>

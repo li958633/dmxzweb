@@ -1,0 +1,1337 @@
+<!doctype html>
+<html
+  lang="zh-cn" 
+  data-theme-mode="auto"
+  >
+  <head><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  CPU 压榨机——介绍及下载 | 代码小梓
+</title>
+<meta
+  name="description"
+  content="少女祈祷中..."
+/><script async src="https://hm.baidu.com/hm.js?true"></script>
+<script data-pjax>
+  var _hmt = _hmt || [];
+  _hmt.push(["_trackPageview", location.pathname]);
+</script><script>
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "true");
+</script><script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"https://li958634.github.io/dmxzweb/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"i18n_languages\":[{\"Lang\":\"en\",\"LanguageName\":\"English\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"ja\",\"LanguageName\":\"日本語\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"zb-cn\",\"LanguageName\":\"Please switch languages on the home page.\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"zh-cn\",\"LanguageName\":\"简体中文\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"zq-cn\",\"LanguageName\":\"ホームページで言語を切り替えてください.\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"zt-cn\",\"LanguageName\":\"语言切换请在首页切换\",\"LanguageCode\":\"\",\"Title\":\"\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false}],\"icon_font\":\"4552607_0khxww3tj3q9\",\"outdate\":{\"daysago\":180,\"enable\":true,\"message\":{\"en\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/dmxzweb/css/loader.min.ac746e154f756f8220326eeb52a719f142ab038be5a8ddf30ea5ef15ef2356ea.css" />
+<meta property="og:type" content="website" />
+  <meta property="og:title" content="CPU 压榨机——介绍及下载 | 代码小梓" />
+  <meta
+    property="og:description"
+    content="少女祈祷中..."
+  />
+  <meta property="og:url" content="https://li958634.github.io/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/" />
+  <meta
+    property="og:site_name"
+    content="代码小梓-コード小梓"
+  />
+  <meta
+    property="og:image"
+    content="/dmxzweb/"
+  />
+  <meta property="article:author" content="代码小梓" />
+  <meta property="article:published_time" content="2025-08-01T15:14:42&#43;00:00" />
+  <meta property="article:modified_time" content="2025-08-01T15:14:42&#43;00:00" /><meta property="article:tag" content="程序性能测试" /><meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="/dmxzweb/" />
+<link rel="shortcut icon" href="/dmxzweb/favicon.ico"><link rel="stylesheet" href="/dmxzweb/css/main.min.034caa2670edf0ca83efc3e3d8e1d1ad22a236889e3a44af66db88ccd82b0203.css" />
+<link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.22/dist/katex.min.css"
+    integrity="sha384-5TcZemv2l/9On385z///&#43;d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous"onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/gitalk@1.8.0/dist/gitalk.css"
+    integrity="sha384-X7z7PUv2B67D8sPJyzDyGZSco1ADwmdI7ed4eCGtTKkClfyDFpPL9WgAn9XVr/Io" crossorigin="anonymous"/><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css"
+    integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt&#43;HsAtOaUsXwJGRb4/SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous"/><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css"
+    integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj&#43;vDDLIL&#43;xBGQU/voDBY5XE2lVh" crossorigin="anonymous"/></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+          M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg></div><div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script><div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+<div id="lang-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+本文章没有找到对应的语言版本
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav"><span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon rotate'>&#xe62b;</div>
+        <a class="main-nav-link" href="/dmxzweb/">首页</a>
+      </span><span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon rotate'>&#xe62b;</div>
+        <a class="main-nav-link" href="/dmxzweb/archives">归档</a>
+      </span><span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon rotate'>&#xe62b;</div>
+        <a class="main-nav-link" href="/dmxzweb/about">关于</a>
+      </span><span class="main-nav-link-wrap">
+        <div class='main-nav-icon icon rotate'>&#xe62b;</div>
+        <a class="main-nav-link" href="/dmxzweb/friend">友链</a>
+      </span><a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav"></nav><nav id="i18n-nav">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items"><li data-value="en"  >English</li><li data-value="ja"  >日本語</li><li data-value="zb-cn"  >Please switch languages on the home page.</li><li data-value="zh-cn" class="selected" >简体中文</li><li data-value="zq-cn"  >ホームページで言語を切り替えてください.</li><li data-value="zt-cn"  >语言切换请在首页切换</li></ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            if (item.dataset.value === 'zh-cn') {
+              return;
+            }
+            if (!langMap[item.dataset.value]) {
+              _$("#lang-tooltip").style.opacity = "1";
+              setTimeout(() => {
+                _$("#lang-tooltip").style.opacity = "0";
+              }, 1000);
+              return;
+            }
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+          }
+        });
+      </script>
+    </nav></div>
+<header id="header"><picture></picture><img  fetchpriority="high" src="/dmxzweb/images/banner.webp" alt="CPU 压榨机——介绍及下载"><div id="header-outer">
+    <div id="header-title"><a href="/dmxzweb/" id="logo">
+            <h1 data-aos="slide-up">CPU 压榨机——介绍及下载</h1>
+          </a><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          
+          class="sidebar-right"  ><aside id="sidebar"><meting-js
+      theme="var(--color-link)"
+      id="2265921590"server="netease"type="playlist"auto="true"fixed="false"autoplay="true"loop="all"order="list"preload="auto"volume="0.7"mutex="true"list-folded="false"lrc-type="3">
+    </meting-js><div class="sidebar-wrapper wrap-sticky">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cpu压榨机---业余级cpu性能测试工具">CPU压榨机 - 业余级CPU性能测试工具</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/dmxzweb/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="代码小梓"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">代码小梓</div>
+  <div class="sidebar-description">少女祈祷中...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">10</div>
+  </div>
+  <a class="sidebar-state-category" href="/dmxzweb/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/dmxzweb/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">8</div>
+  </a>
+</div>
+<div class="sidebar-social"></div>
+<div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/"
+        aria-label="首页"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">首页</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/archives"
+        aria-label="归档"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">归档</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/about"
+        aria-label="关于"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">关于</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/friend"
+        aria-label="友链"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">友链</div>
+    </div></div>
+</div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div>
+
+  <div class="sidebar-widget"></div></aside>
+<section id="main"><article
+  class="h-entry article"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link"
+    data-aos="zoom-in"
+  >
+    <time datetime="2025-08-01 15:14:42 &#43;0000 UTC" itemprop="datePublished"
+      >2025-08-01</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2025-08-01</time
+    >
+  </span>
+</div>
+<div class="article-category"></div>
+</div>
+    <div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><blockquote id="outdate-blockquote" style="display: none;">
+          <p></p>
+        </blockquote><blockquote>
+<ul>
+<li>
+<h3 id="cpu压榨机---业余级cpu性能测试工具">
+<a class="header-anchor" href="#cpu%e5%8e%8b%e6%a6%a8%e6%9c%ba---%e4%b8%9a%e4%bd%99%e7%ba%a7cpu%e6%80%a7%e8%83%bd%e6%b5%8b%e8%af%95%e5%b7%a5%e5%85%b7"></a>
+CPU压榨机 - 业余级CPU性能测试工具
+</h3><h4 id="一功能与特点">
+<a class="header-anchor" href="#%e4%b8%80%e5%8a%9f%e8%83%bd%e4%b8%8e%e7%89%b9%e7%82%b9"></a>
+一、功能与特点
+</h4><ol>
+<li><strong>核心功能</strong></li>
+</ol>
+</li>
+<li>
+<p>多线程压力测试：支持全核心满载测试，可自定义线程数</p>
+</li>
+<li>
+<p>实时监控：动态显示CPU使用率，可视化进度条</p>
+</li>
+<li>
+<p>参数调节：可设置测试持续时间、计算速度和最大CPU占用率</p>
+</li>
+<li>
+<p>安全机制：提供正常停止和紧急停止双保险</p>
+<p>2.<strong>特色功能</strong></p>
+</li>
+<li>
+<p>主题切换：支持深色/浅色/系统三种主题模式</p>
+</li>
+<li>
+<p>日志系统：完整记录测试过程，支持日志清除</p>
+</li>
+<li>
+<p>可视化界面：采用Modern UI设计，操作直观</p>
+</li>
+<li>
+<p>硬件检测：自动识别CPU核心数量</p>
+</li>
+</ul>
+<h4 id="二代码解析">
+<a class="header-anchor" href="#%e4%ba%8c%e4%bb%a3%e7%a0%81%e8%a7%a3%e6%9e%90"></a>
+二、代码解析
+</h4><ol>
+<li><strong>核心算法</strong></li>
+</ol>
+<p>python</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="k">def</span> <span class="nf">cpu_stress_worker</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">speed_factor</span><span class="p">,</span> <span class="n">max_usage</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 数学运算核心</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cycles</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_usage</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cycles</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">     <span class="c1"># 精确控制计算间隔</span>
+</span></span><span class="line"><span class="cl">     <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="n">elapsed</span> <span class="o">&lt;</span> <span class="n">sleep_time</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span> <span class="o">-</span> <span class="n">elapsed</span><span class="p">)</span>
+</span></span></code></pre></div><ol>
+<li><strong>架构设计</strong></li>
+</ol>
+<ul>
+<li>
+<p>前端：CustomTkinter构建的现代化GUI，win11样式</p>
+</li>
+<li>
+<p>后端：multiprocessing多进程压力测试</p>
+</li>
+<li>
+<p>监控：psutil实时获取CPU数据</p>
+</li>
+<li>
+<p>日志：CTkTextbox实现的滚动日志系统</p>
+<ol start="2">
+<li><strong>关键技术点</strong></li>
+</ol>
+</li>
+<li>
+<p>进程管理：通过multiprocessing.Process创建测试进程</p>
+</li>
+<li>
+<p>事件控制：使用Event对象实现进程同步</p>
+</li>
+<li>
+<p>资源监控：定时器轮询机制更新UI状态</p>
+</li>
+<li>
+<p>异常处理：完善的错误捕获和提示机制</p>
+</li>
+</ul>
+<h4 id="三使用指南">
+<a class="header-anchor" href="#%e4%b8%89%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97"></a>
+三、使用指南
+</h4><ol>
+<li>
+<p><strong>操作流程</strong></p>
+</li>
+<li>
+<p>设置测试参数：</p>
+<ul>
+<li>持续时间（秒）
+<ul>
+<li>线程数（默认全核心）</li>
+</ul>
+</li>
+<li>最大CPU占用率</li>
+</ul>
+<p>2.启动测试：</p>
+<ul>
+<li>
+<p>点击&quot;开始压力测试&quot;</p>
+</li>
+<li>
+<p>确认警告信息</p>
+<p>3.监控状态：</p>
+<ul>
+<li>实时查看CPU使用率</li>
+</ul>
+</li>
+<li>
+<p>观察日志输出</p>
+<p>4.停止测试：</p>
+<ul>
+<li>正常停止：等待完成或手动停止</li>
+</ul>
+</li>
+<li>
+<p>紧急停止：立即终止所有进程</p>
+</li>
+</ul>
+<p><strong>界面说明</strong></p>
+<ul>
+<li>仪表盘：核心监控区域，显示CPU状态</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>测试日志：记录所有测试事件</li>
+<li>系统设置：查看硬件信息和默认配置
+<ul>
+<li>关于页面：开发者信息和项目链接</li>
+</ul>
+</li>
+</ul>
+<h4 id="四注意事项">
+<a class="header-anchor" href="#%e5%9b%9b%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9"></a>
+四、注意事项
+</h4><pre><code> 1. **安全警告**
+ ❗ 高负载可能导致：
+
+ - CPU温度急剧升高
+</code></pre>
+<ul>
+<li>
+<p>系统响应迟缓</p>
+</li>
+<li>
+<p>风扇高速运转</p>
+<ul>
+<li>笔记本电脑电池快速耗电</li>
+</ul>
+<p>2.<strong>使用建议</strong></p>
+<ul>
+<li>建议持续时间不超过30分钟</li>
+</ul>
+</li>
+<li>
+<p>保持良好散热环境</p>
+<ul>
+<li>笔记本用户建议连接电源</li>
+</ul>
+</li>
+<li>
+<p>避免与其他高负载程序同时运行</p>
+<p>3.<strong>技术限制</strong></p>
+</li>
+<li>
+<p>无法精确控制单个核心负载</p>
+</li>
+<li>
+<p>测试结果受散热条件影响</p>
+</li>
+<li>
+<p>部分低功耗CPU可能无法达到100%负载</p>
+</li>
+</ul>
+<h4 id="五开发背景">
+<a class="header-anchor" href="#%e4%ba%94%e5%bc%80%e5%8f%91%e8%83%8c%e6%99%af"></a>
+五、开发背景
+</h4><ol>
+<li><strong>技术栈选择</strong></li>
+</ol>
+<ul>
+<li>GUI框架：CustomTkinter（基于Tkinter的现代化封装）</li>
+<li>多进程：Python标准库multiprocessing
+<ul>
+<li>系统监控：psutil跨平台库</li>
+</ul>
+</li>
+<li>打包工具：建议使用PyInstaller</li>
+</ul>
+<p>2.<strong>设计理念</strong></p>
+<ul>
+<li>用户友好：直观的操作界面
+<ul>
+<li>安全第一：多重防护机制</li>
+</ul>
+</li>
+<li>代码规范：遵循PEP8标准
+<ul>
+<li>可扩展性：模块化设计</li>
+</ul>
+</li>
+</ul>
+<h4 id="六进阶使用">
+<a class="header-anchor" href="#%e5%85%ad%e8%bf%9b%e9%98%b6%e4%bd%bf%e7%94%a8"></a>
+六、进阶使用
+</h4><ol>
+<li>
+<p>**开发者模式&quot;
+可通过修改config字典调整默认参数：</p>
+<p>python</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;cpu_threads&#34;</span><span class="p">:</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">       <span class="s2">&#34;stress_speed&#34;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>  <span class="c1"># 可调整为50-200</span>
+</span></span><span class="line"><span class="cl">       <span class="s2">&#34;max_cpu_usage&#34;</span><span class="p">:</span> <span class="mi">100</span>  <span class="c1"># 可调整为1-100</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></div><h4 id="七常见问题">
+<a class="header-anchor" href="#%e4%b8%83%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98"></a>
+七、常见问题
+</h4><p>Q: 测试时系统卡顿怎么办？
+A: 立即停止测试</p>
+<p>Q: 程序无法启动可能原因？
+A: 检查Python环境是否安装psutil和customtkinter库等</p>
+<p>Q: 如何长期监控CPU性能？
+A: 建议使用专业监控软件，本工具适合短时压力测试</p>
+<h4 id="八技术展望">
+<a class="header-anchor" href="#%e5%85%ab%e6%8a%80%e6%9c%af%e5%b1%95%e6%9c%9b"></a>
+八、技术展望
+</h4><ol>
+<li><strong>社区共建</strong>
+欢迎开发者通过以下方式参与：</li>
+</ol>
+<ul>
+<li>提交Pull Request</li>
+<li>报告Issues</li>
+<li>完善文档</li>
+<li>分享测试案例</li>
+</ul>
+<h4 id="九免责声明">
+<a class="header-anchor" href="#%e4%b9%9d%e5%85%8d%e8%b4%a3%e5%a3%b0%e6%98%8e"></a>
+九、免责声明
+</h4><ol>
+<li>本工具仅供技术测试使用</li>
+<li>因使用不当造成的硬件损坏概不负责</li>
+<li>禁止用于非法用途</li>
+</ol>
+<blockquote>
+<p>项目地址：<a href="https://github.com/li958633/CPUpressV2.13.4/">CPU压榨机的Github仓库</a></p>
+<p>技术支持QQ：1931688073</p>
+<p>B站主页：<a href="https://space.bilibili.com/1114574804">代码小梓的个人空间</a></p>
+<p>蓝奏云网盘下载：<a href="https://wwhb.lanzouu.com/igChy32pc9mj">cpu压榨机下载</a>
+密码:caizi</p></blockquote></blockquote>
+</div>
+    <footer class="article-footer"><blockquote class="article-copyright"><p><strong><span class="icon-user icon"></span>本文作者：</strong>代码小梓 @ 代码小梓-コード小梓</p><p><strong><span class="icon-pencil icon"></span>本文标题：</strong>CPU 压榨机——介绍及下载</p><p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2025-08-01 15:14:42</p><p>
+      
+      <strong><span class="icon-copyright icon"></span>本文版权：</strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> 许可协议。转载请注明出处！
+    </p>
+    <span class="icon-creative-commons article-copyright-bg"></span></blockquote>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/dmxzweb/tags/%e7%a8%8b%e5%ba%8f"
+        rel="tag"
+        >程序</a
+      >
+    </li><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/dmxzweb/tags/%e6%80%a7%e8%83%bd%e6%b5%8b%e8%af%95"
+        rel="tag"
+        >性能测试</a
+      >
+    </li></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap article-nav-link-right"><img
+              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
+              data-sizes="auto"
+              alt="所有病毒下载地址"
+              class="lazyload"
+            /><a href="/dmxzweb/post/%E6%89%80%E6%9C%89%E7%97%85%E6%AF%92%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/"></a>
+        <div class="article-nav-caption">后一篇</div>
+        <h3 class="article-nav-title">所有病毒下载地址</h3>
+      </div></nav></article><section id="comments" data-aos="fade-up">
+<div class="comment-header"><h2 class="comment-title">说些什么吧！</h2>
+  <div class="comment-selector">
+    <div class="comment-selector-wrap"><div class="selector-item" data-selector="giscus">
+          <span>giscus</span>
+        </div><div class="selector-item" data-selector="gitalk">
+          <span>gitalk</span>
+        </div></div>
+  </div>
+</div>
+
+<div class="comment-content"><div class="comment giscus-comment" data-aos="fade-up"
+     >
+    </div><div class="comment gitalk-comment" data-aos="fade-up"
+     id="gitalk-comment">
+    </div></div>
+</section></section>
+        </div><footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2020-2025<span class="footer-info-sep rotate"></span>
+      代码小梓
+    </div><div>
+        基于&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          >Hugo</a
+        >&nbsp; Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;732</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;00:10</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >总访问量&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >总访客量&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cpu压榨机---业余级cpu性能测试工具">CPU压榨机 - 业余级CPU性能测试工具</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/dmxzweb/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="代码小梓"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">代码小梓</div>
+  <div class="sidebar-description">少女祈祷中...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">10</div>
+  </div>
+  <a class="sidebar-state-category" href="/dmxzweb/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      4
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/dmxzweb/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">8</div>
+  </a>
+</div>
+<div class="sidebar-social"></div>
+<div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/"
+        aria-label="首页"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">首页</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/archives"
+        aria-label="归档"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">归档</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/about"
+        aria-label="关于"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">关于</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/dmxzweb/friend"
+        aria-label="友链"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>&#xe62b;</div>
+      <div class="sidebar-menu-link">友链</div>
+    </div></div>
+</div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/dmxzweb/js/main.js" integrity="" crossorigin="anonymous" ></script><script src="/dmxzweb/js/aos.js" integrity="" crossorigin="anonymous" ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/dmxzweb/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax></script><script
+    src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js"
+    integrity="sha384-8LyaidD9GPxQQgLJO/WRw/O2h3BoNq/ApI/ecpvM6RsrCz2qP2ppBXUKihP4V/2d" crossorigin="anonymous"></script><script>
+  if (window.firework) {
+    const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+    options.excludeElements = options.excludeelements;
+    delete options.excludeelements;
+    window.firework(options);
+  }
+</script><script
+    src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js"
+    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          return new Promise((resolve, reject) => {
+            const scriptElement = document.createElement('script');
+            if (script.type) {
+              scriptElement.type = script.type;
+            }
+            if (script.src) {
+              scriptElement.src = script.src;
+              if (script.integrity) {
+                scriptElement.integrity = script.integrity;
+              }
+              if (script.crossOrigin) {
+                scriptElement.crossOrigin = script.crossOrigin;
+              }
+              scriptElement.onload = resolve;
+              scriptElement.onerror = reject;
+            }
+            if (scriptContent) {
+              scriptElement.text = scriptContent;
+            }
+            document.head.appendChild(scriptElement);
+            if (!script.src) {
+              resolve();
+            }
+          })
+          
+        }
+
+        ;(src ? loadScript() : loadScript(script.text))
+          .then(() => loadScripts(scripts, index + 1))
+          .catch(error => {
+            console.error(`Failed to load script: ${src || 'inline script'}`, error);
+            loadScripts(scripts, index + 1);
+          });
+      }
+    }
+    if (window.Pjax) {
+      Pjax.prototype.getElements = function() {
+        const i18nLanguages = window.siteConfig.i18n_languages;
+        const baseUrl = window.siteConfig.base;
+        let basePathname = new URL(baseUrl).pathname;
+        if (!basePathname.endsWith('/')) {
+          basePathname += '/';  
+        }
+        const currentUrl = window.location.href;
+        const currentPathname = new URL(currentUrl).pathname.replace(basePathname, '');
+        const aLinks = document.querySelectorAll('a[href]');
+        const pjaxLinks = [];
+        for(let i = 0; i < aLinks.length; i++) {
+          const aLink = aLinks[i];
+          const aLinkHref = aLink.getAttribute('href');
+          const isExternal = aLink.getAttribute('target') === '_blank' || aLink.getAttribute('rel')?.includes('noopener');
+          if (isExternal || aLinkHref.startsWith('mailto:') || aLinkHref.startsWith('tel:') || aLinkHref.startsWith('javascript:') || aLinkHref.startsWith("data:") || aLinkHref.startsWith("vbscript:")) {
+            continue;
+          }
+          if (!i18nLanguages) {
+            
+            pjaxLinks.push(aLink);
+            continue;
+          }
+          const absoluteUrl = new URL(aLinkHref, currentUrl).href;
+          const absolutePathname = new URL(absoluteUrl).pathname.replace(basePathname, '');
+          if (!absolutePathname || !currentPathname) {
+            pjaxLinks.push(aLink);
+            continue;
+          }
+          const currentLangIndex = i18nLanguages.findIndex(lang => currentPathname.startsWith(lang.Lang));
+          if (currentLangIndex > -1) {
+            
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang.Lang));
+            if (absoluteLangIndex === currentLangIndex) {
+              
+              pjaxLinks.push(aLink);
+            }
+          } else {
+            
+            const absoluteLangIndex = i18nLanguages.findIndex(lang => absolutePathname.startsWith(lang.Lang));
+            if (absoluteLangIndex === -1) {
+              
+              pjaxLinks.push(aLink);
+            }
+          }
+        }
+        return pjaxLinks;
+      }
+    }
+    window.Pjax &&
+      new window.Pjax({
+        selectors: [
+          "#header>img",
+          "#header>picture",
+          "head title",
+          "#header-title",
+          "#subtitle-wrap",
+          "#main",
+          "#content",
+          ".sidebar-widget",
+          ".sidebar-wrapper",
+          "#mobile-nav",
+          "#lazy-script",
+          '#i18n-nav'
+        ],
+        switches: {
+          "#content": function(oldEl, newEl) {
+            
+            oldEl.className = newEl.className;
+            this.onSwitch();
+          },
+          "#header-title": Pjax.switches.outerHTML,
+          "#subtitle-wrap": Pjax.switches.outerHTML,
+          "#main": function (oldEl, newEl) {
+            const scripts = [...newEl.querySelectorAll("script")];
+            loadScripts(scripts, 0);
+            oldEl.outerHTML = newEl.outerHTML;
+            this.onSwitch();
+          },
+          "#mobile-nav": Pjax.switches.outerHTML,
+          "#lazy-script": function (oldEl, newEl) {
+            const scripts = [...newEl.querySelectorAll("script")];
+            loadScripts(scripts, 0);
+            oldEl.innerHTML = newEl.innerHTML;
+            this.onSwitch();
+          },
+        },
+        cacheBust: false,
+      });
+  </script><script src="/dmxzweb/js/pjax.js" integrity="" crossorigin="anonymous" ></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "代码小梓",
+          title: "CPU 压榨机——介绍及下载",
+          url: "https:\/\/li958634.github.io\/dmxzweb\/post\/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD\/",
+          description: " CPU压榨机 - 业余级CPU性能测试工具 一、功能与特点 核心功能 多线程压力测试：支持全核心满载测试，可自定义线程数\n实时监控：动态显示CPU使用率，可视化进度条\n参数调节：可设置测试持续时间、计算速度和最大CPU占用率\n安全机制：提供正常停止和紧急停止双保险\n2.特色功能\n主题切换：支持深色\/浅色\/系统三种主题模式\n日志系统：完整记录测试过程，支持日志清除\n可视化界面：采用Modern UI设计，操作直观\n硬件检测：自动识别CPU核心数量\n二、代码解析 核心算法 python\ndef cpu_stress_worker(duration, speed_factor, …",
+          cover: "https:\/\/li958634.github.io\/dmxzweb\/images\/banner.webp",
+        };
+      </script><script src="/dmxzweb/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script><script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+  var commentConfigKeys = ['valine', 'waline', 'twikoo', 'gitalk', 'giscus'];
+  var commentConfig = {
+    valine: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.valine-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        const script = loadScript(
+          'https:\/\/npm.webcache.cn\/valine@1.5.1\/dist\/Valine.min.js',
+          !'webcache|valine@1.5.1\/dist\/Valine.min.js'.startsWith('local') ? 'sha384-3ma91AExDeMAZ1rjTjaP8V2A2obQE\u002bs5ltKRwYlwdpArz9xVbp0tF3b0VV2ACNPn' : undefined
+        );
+        script.onload = () => {
+          const GUEST_INFO = ['nick', 'mail', 'link'];
+          const guest_info = 'nick,mail,link'.split(',').filter((item) => {
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          const recordIP = JSON.parse('true');
+          const highlight = JSON.parse('true');
+          const visitor = JSON.parse('false');
+          const serverURLs = undefined;
+
+          new Valine({
+            el: '.valine-comment',
+            appId: "",
+            appKey: "",
+            placeholder: "Just go go",
+            pageSize: '10',
+            avatar: 'mp',
+            lang: document.documentElement.lang || 'en',
+            recordIP: recordIP,
+            highlight: highlight,
+            visitor: visitor,
+            requiredFields: guest_info,
+            path: window.location.pathname,
+            serverURLs,
+          });
+        };
+        document.head.appendChild(script);
+      }
+    },
+    waline: {
+      enable: false,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https:\/\/npm.webcache.cn\/@waline\/client@2.15.8\/dist\/waline.mjs';
+        
+        if ('webcache|@waline\/client@2.15.8\/dist\/waline.mjs'.startsWith('local')) {
+          
+          const module = await safeImport(walineCdn);
+          walineInit = module.init;
+        } else {
+          
+          const module = await safeImport(
+            walineCdn, 
+            'sha384-9sbqJjrfGjbkI6\/PI4nU\/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH\/KinBEAZII\/5'
+          );
+          walineInit = module.init;
+        }
+        
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: '',
+          lang: document.documentElement.lang || 'en',
+          locale: JSON.parse("{}"),
+          emoji: JSON.parse("[\"https://unpkg.com/@waline/emojis@1.2.0/weibo\",\"https://unpkg.com/@waline/emojis@1.2.0/alus\",\"https://unpkg.com/@waline/emojis@1.2.0/bilibili\",\"https://unpkg.com/@waline/emojis@1.2.0/qq\",\"https://unpkg.com/@waline/emojis@1.2.0/tieba\",\"https://unpkg.com/@waline/emojis@1.2.0/tw-emoji\"]"),
+          meta: JSON.parse("[\"nick\",\"mail\",\"link\"]"),
+          requiredMeta: JSON.parse("[\"nick\",\"mail\"]"),
+          wordLimit:  0 ,
+          comment: true,
+          pageSize:  10 ,
+          dark: 'html[data-theme="dark"]',
+          pageview:  true ,
+        });
+      }
+    },
+    twikoo: {
+      enable: false,
+      load: () => {
+        const container = document.querySelector('.twikoo-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        
+        const script = loadScript(
+          'https:\/\/npm.webcache.cn\/twikoo@1.6.44\/dist\/twikoo.all.min.js',
+          !'webcache|twikoo@1.6.44\/dist\/twikoo.all.min.js'.startsWith('local') ? 'sha384-kwWLC0HjeZZnVPqCJ1AncI8tsk\u002bkQqF9TbAmCclcc9Z0hGkfgHRzeQZxmdmZhE0K' : undefined
+        );
+        script.onload = () => {
+          twikoo.init({
+            envId: '',
+            el: '.twikoo-comment',
+            region: '',
+            lang: document.documentElement.lang || 'en',
+          });
+          twikoo.getCommentsCount({
+            envId: '',
+            region: '',
+            urls: [
+              'https\/\/li958634.github.io\/dmxzweb\/post\/cpu-%e5%8e%8b%e6%a6%a8%e6%9c%ba%e4%bb%8b%e7%bb%8d%e5%8f%8a%e4%b8%8b%e8%bd%bd\/'
+            ],
+            includeReply: false
+          }).then((res) => {
+            document.querySelector('.twikoo-comment-count').innerText = res[0].count;
+          }).catch((err) => {
+            console.error(err);
+          });
+        };
+        document.head.appendChild(script);
+      }
+    },
+    gitalk: {
+      enable: true,
+      load: () => {
+        const container = document.querySelector('.gitalk-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        const script = loadScript(
+          'https:\/\/npm.webcache.cn\/gitalk@1.8.0\/dist\/gitalk.min.js',
+          !'webcache|gitalk@1.8.0\/dist\/gitalk.min.js'.startsWith('local') ? 'sha384-kspnZUWBoSWwoJHa0hBCXYbHGbhvU\/lcEH5O8eVbSDhbPwsiVUTp\/aGX\/z\/5EuMA' : undefined
+        );
+        script.onload = () => {
+          if ( false ) {
+            
+            const md5Script = loadScript(
+              'https:\/\/npm.webcache.cn\/blueimp-md5@2.19.0\/js\/md5.min.js',
+              !'webcache|blueimp-md5@2.19.0\/js\/md5.min.js'.startsWith('local') ? 'sha384-JmVtRz6RWiXnA14QbIOJzPuU3MidULOpBP66deeLLyyoF4Tr\/gZlbkHkL6vTthxH' : undefined
+            );
+            md5Script.onload = initGitalk;
+            document.head.appendChild(md5Script);
+          } else {
+            
+            initGitalk();
+          }
+        };
+        document.head.appendChild(script);
+
+        function initGitalk() {
+          let gitalk = new Gitalk({
+            clientID: 'Ov23lisCEqs2YxKlFjdL',
+            clientSecret: 'b1cf4f8882fa71c1088a5dcab3e922581cfe1138',
+            repo: 'dmxzpl',
+            owner: 'li958633',
+            admin: JSON.parse("\"li958633\""),
+            id: location.pathname,
+            distractionFreeMode: false,
+            language: document.documentElement.lang || 'en',
+          });
+          gitalk.render('gitalk-comment');
+        }
+      }
+    },
+    giscus: {
+      enable: true,
+      load: () => {
+        const container = document.querySelector('.giscus-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        
+        const existingScript = container.querySelector('script[src*="giscus.app/client.js"]');
+        if (existingScript) existingScript.remove();
+        const existingFrame = document.querySelector('iframe.giscus-frame');
+        if (existingFrame) existingFrame.remove();
+
+        
+        const giscusScript = document.createElement('script');
+        const domMode = document.documentElement.getAttribute("data-theme");
+
+        const docLang = document.documentElement.lang || 'en';
+        const langBase = docLang.split('-')[0];
+        const supportedLangs = ['ar', 'be', 'bg', 'ca', 'cs', 'da', 'de', 'en', 
+        'eo', 'es', 'eu', 'fa', 'fr', 'gr', 'hbs', 'he', 'hu', 'id', 'it', 'ja', 
+        'kh', 'ko', 'nl', 'pl', 'pt', 'ro', 'ru', 'th', 'tr', 'uk', 'uz', 'vi', 'zh-CN', 'zh-HK', 'zh-TW'];
+        const giscusLang = supportedLangs.includes(docLang) ? docLang : supportedLangs.includes(langBase) ? langBase : 'en';
+
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.setAttribute('data-repo', 'li958633\/pl12');
+        giscusScript.setAttribute('data-repo-id', 'R_kgDOPXUrFw');
+        giscusScript.setAttribute('data-category', 'Announcements');
+        giscusScript.setAttribute('data-category-id', 'DIC_kwDOPXUrF84Ctt18');
+        giscusScript.setAttribute('data-mapping', '0');
+        giscusScript.setAttribute('data-strict', '0');
+        giscusScript.setAttribute('data-reactions-enabled', '1');
+        giscusScript.setAttribute('data-emit-metadata', '0');
+        giscusScript.setAttribute('data-input-position', 'bottom');
+        giscusScript.setAttribute('data-theme', domMode === 'dark' ? 'dark' : 'light');
+        giscusScript.setAttribute('data-lang', giscusLang);
+        giscusScript.setAttribute('crossorigin', 'anonymous');
+        giscusScript.async = true;
+        container.appendChild(giscusScript);
+        document.body.addEventListener('light-theme-set', () => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light' } } }, 'https://giscus.app');
+        });
+        document.body.addEventListener('dark-theme-set', () => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: 'dark' } } }, 'https://giscus.app');
+        });
+      }
+    }
+  };
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    
+    if (!defaultComment) {
+      var configDefault = 'giscus';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      
+      const commentType = item.getAttribute('data-selector');
+
+      
+      hideAllComments();
+
+      
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          
+          changeActiveCommentItems(item);
+        });
+      }
+
+      
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script></div>
+</div><script data-pjax>
+    var updateTime = _$('#post-update-time')?.innerHTML;
+
+    if (updateTime) {
+      const update = new Date(updateTime);
+      const now = new Date();
+      const diff = now - update;
+      const days = diff / 86400000;
+      const { daysago: daysAgo, message: template } = window.siteConfig.outdate;
+      if (days >= daysAgo) {
+        let message = `This article was last updated on ${updateTime}. Please note that the content may no longer be applicable.`;
+        if (typeof template === 'string') {
+          message = template.replace(/{time}/, updateTime);
+        } else if (typeof template === 'object') {
+          const lang = document.documentElement.lang;
+          const messageKey = Object.keys(template).find(key => key.toLowerCase() === lang.toLowerCase());
+          if (messageKey && template[messageKey]) {
+            message = template[messageKey].replace(/{time}/, updateTime);
+          }
+        }
+        const blockquote = _$('#outdate-blockquote');
+        if (blockquote) {
+          blockquote.querySelector('p').innerText = message;
+          blockquote.style.display = 'block';
+        }
+      }
+    }
+  </script><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    asyncintegrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script><script
+    src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js"
+    integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr&#43;h5UfruuRL/aORyw&#43;5&#43;HZoU6e" crossorigin="anonymous"></script><script>
+    var isMobile = window.matchMedia('(max-width: 959px)').matches;
+    if (isMobile) {
+      const meting = _$('meting-js');
+      if (meting) {
+        meting.setAttribute('fixed', 'true');
+        const aside = meting.parentNode;
+        if (aside?.tagName === 'ASIDE') {
+          aside.removeChild(meting);
+          document.body.appendChild(meting);
+        }
+      }
+    }
+  </script><script
+    src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js"
+    integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8&#43;0maanw1S/IyB&#43;Y4JG&#43;ZDU7GpKE8" crossorigin="anonymous"></script></body>
+</html>

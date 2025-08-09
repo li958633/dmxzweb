@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>程序 on 代码小梓-コード小梓</title>
+    <link>https://li958634.github.io/dmxzweb/categories/%E7%A8%8B%E5%BA%8F/</link>
+    <description>Recent content from 代码小梓-コード小梓</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>14706825732@163.com (代码小梓)</managingEditor>
+    <webMaster>14706825732@163.com (代码小梓)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Fri, 01 Aug 2025 15:14:48 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://li958634.github.io/dmxzweb/categories/%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>EasyDesktop - 您的桌面伴侣</title>
+      <link>https://li958634.github.io/dmxzweb/post/easydesktop---%E6%82%A8%E7%9A%84%E6%A1%8C%E9%9D%A2%E4%BC%B4%E4%BE%A3/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/easydesktop---%E6%82%A8%E7%9A%84%E6%A1%8C%E9%9D%A2%E4%BC%B4%E4%BE%A3/</guid>
+      <description>
+        <![CDATA[<h1>EasyDesktop - 您的桌面伴侣</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <h1 id="easydesktop---您的桌面伴侣">
+<a class="header-anchor" href="#easydesktop---%e6%82%a8%e7%9a%84%e6%a1%8c%e9%9d%a2%e4%bc%b4%e4%be%a3"></a>
+EasyDesktop - 您的桌面伴侣
+</h1><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">✨</span> <span class="o">**</span><span class="n">让整洁桌面与高效操作完美共存</span><span class="o">**</span> <span class="err">✨</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">隐藏桌面图标</span><span class="err">，</span><span class="n">但不隐藏便捷性</span><span class="err">！</span><span class="o">**</span> <span class="n">EasyDesktop</span> <span class="n">是一款创新的桌面增强工具</span>
+</span></span><span class="line"><span class="cl"><span class="n">让您在保持桌面整洁美观的同时</span><span class="err">，</span><span class="n">快速访问桌面文件</span><span class="err">。</span><span class="n">只需将鼠标移至屏幕左下角</span><span class="err">，</span><span class="n">即可呼出智能文件面板</span><span class="err">！</span>
+</span></span></code></pre></div><p><a href="https://gitee.com/codevicent/easy-desktop">EasyDesktop: 一个桌面增强工具，旨在让你隐藏桌面图标的同时不影响桌面文件使用的快捷性，并提升桌面美观程度。</a></p>
+<h2 id="-开发信息">
+<a class="header-anchor" href="#-%e5%bc%80%e5%8f%91%e4%bf%a1%e6%81%af"></a>
+🔧 开发信息
+</h2><blockquote>
+<p>[!IMPORTANT]</p>
+<p>软件使用pywebview开发，界面使用html+css+js实现，实际操作（如打开文件、新建文件等）由python实现（js通过pywebview调用）</p>
+<p>特别感谢<a href="https://gitee.com/ALX4890">@CassianVale</a>对代码进行了模块化重构，感谢大佬！</p></blockquote>
+<h2 id="-核心功能">
+<a class="header-anchor" href="#-%e6%a0%b8%e5%bf%83%e5%8a%9f%e8%83%bd"></a>
+✨ 核心功能
+</h2><h3 id="-快捷呼出与布局">
+<a class="header-anchor" href="#-%e5%bf%ab%e6%8d%b7%e5%91%bc%e5%87%ba%e4%b8%8e%e5%b8%83%e5%b1%80"></a>
+🖥️ 快捷呼出与布局
+</h3><ul>
+<li><strong>角落触发</strong>：鼠标移至左下角即可呼出面板</li>
+<li><strong>双视图模式</strong>：网格布局（默认）与列表布局自由切换</li>
+<li><strong>深度文件操作</strong>：
+<ul>
+<li>新建文件（docx/xlsx/pptx/txt/文件夹）</li>
+<li>重命名/删除文件</li>
+<li>粘贴剪切板文件（支持资源管理器复制内容）</li>
+<li>单击打开文件，双击在资源管理器显示</li>
+<li>单击进入文件夹，双击在资源管理器打开</li>
+</ul>
+</li>
+</ul>
+<h3 id="-极速查找">
+<a class="header-anchor" href="#-%e6%9e%81%e9%80%9f%e6%9f%a5%e6%89%be"></a>
+🔍 极速查找
+</h3><ul>
+<li><strong>智能过滤</strong>：输入文件名、拼音首字母或全拼实时搜索</li>
+<li><strong>模糊匹配</strong>：忽略大小写和标点符号</li>
+<li><strong>快速搜索</strong>：在当前目录进行快速搜索</li>
+</ul>
+<h3 id="-个性化主题">
+<a class="header-anchor" href="#-%e4%b8%aa%e6%80%a7%e5%8c%96%e4%b8%bb%e9%a2%98"></a>
+🎨 个性化主题
+</h3><ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">多主题支持</span><span class="o">**</span><span class="err">：</span><span class="n">浅色</span><span class="o">/</span><span class="n">深色</span><span class="o">/</span><span class="mi">3</span><span class="n">Z</span> <span class="n">三种主题</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">系统跟随</span><span class="o">**</span><span class="err">：</span><span class="n">自动匹配系统主题切换</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">高级自定义</span><span class="o">**</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">自定义背景图片</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">磨砂效果强度调节</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">自行选择使用全屏模式或窗口模式</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="n">窗口模式下窗口大小可调节并记录</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">⚙️</span> <span class="n">便捷设置</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">开机自启</span><span class="o">**</span><span class="err">：</span><span class="n">一次设置</span><span class="err">，</span><span class="n">永久自动运行</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="o">**</span><span class="n">零配置使用</span><span class="o">**</span><span class="err">：</span><span class="n">下载即用</span><span class="err">，</span><span class="n">无需复杂安装</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="-快速开始">
+<a class="header-anchor" href="#-%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b"></a>
+🚀 快速开始
+</h2><ol>
+<li><strong>下载软件</strong>：请在右侧的发行版中获取最新版软件！</li>
+<li><strong>运行程序</strong>：解压后双击 <code>easyDesktop.exe</code> 即可启动</li>
+<li><strong>基本操作</strong>：
+<ul>
+<li>鼠标移至左下角呼出面板</li>
+<li>右键菜单进行文件操作</li>
+<li>右上角设置按钮进行个性化配置</li>
+</ul>
+</li>
+<li><strong>设置自启</strong>：设置中勾选&quot;开机自启动&quot;</li>
+</ol>
+<h2 id="-贡献指南">
+<a class="header-anchor" href="#-%e8%b4%a1%e7%8c%ae%e6%8c%87%e5%8d%97"></a>
+🤝 贡献指南
+</h2><blockquote>
+<p>[!NOTE]</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+        <category>windows</category><category>程序</category>
+      
+    </item>
+    
+  </channel>
+</rss>

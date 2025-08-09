@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>性能测试 on 代码小梓-コード小梓</title>
+    <link>https://li958634.github.io/dmxzweb/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content from 代码小梓-コード小梓</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>14706825732@163.com (代码小梓)</managingEditor>
+    <webMaster>14706825732@163.com (代码小梓)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Fri, 01 Aug 2025 15:14:48 +0000</lastBuildDate>
+    
+    
+    <atom:link href="https://li958634.github.io/dmxzweb/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>内存压榨器介绍及下载</title>
+      <link>https://li958634.github.io/dmxzweb/post/%E5%86%85%E5%AD%98%E5%8E%8B%E6%A6%A8%E5%99%A8%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:48 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/%E5%86%85%E5%AD%98%E5%8E%8B%E6%A6%A8%E5%99%A8%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</guid>
+      <description>
+        <![CDATA[<h1>内存压榨器介绍及下载</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Memory Squeezer - 内存压榨器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 简介
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Memory Squeezer 是一个用于测试系统内存性能的工具，可以模拟高内存使用场景，帮助开发者测试应用程序在内存压力下的表现。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 功能特性
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- ✅ 单线程和多进程内存压榨模式
+</span></span><span class="line"><span class="cl">- ✅ 可配置的内存块大小和分配速度
+</span></span><span class="line"><span class="cl">- ✅ 实时内存状态监控
+</span></span><span class="line"><span class="cl">- ✅ 四重安全确认机制防止误操作
+</span></span><span class="line"><span class="cl">- ✅ 内存安全限制保护
+</span></span><span class="line"><span class="cl">- ✅ 详细的日志记录
+</span></span><span class="line"><span class="cl">- ✅ 支持多种主题风格
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 系统要求
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">- windows10 +
+</span></span><span class="line"><span class="cl">- 建议内存大小4GB+(避免因为内存过小，程序写入速度过快导致系统问题！)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 安装
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. 克隆仓库或下载源代码
+</span></span><span class="line"><span class="cl">```bash
+</span></span><span class="line"><span class="cl">git clone https://github.com/yourusername/memory-squeezer.git
+</span></span><span class="line"><span class="cl">cd memory-squeezer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">注：本文作者及程序作者不承担此程序造成的任何问题！！！！！！！
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">程序作者QQ：640384548
+</span></span></code></pre></div><h2 id="使用方法">
+<a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95"></a>
+使用方法
+</h2><h3 id="基本使用">
+<a class="header-anchor" href="#%e5%9f%ba%e6%9c%ac%e4%bd%bf%e7%94%a8"></a>
+基本使用
+</h3><ol>
+<li>运行程序</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python memory_squeezer.py
+</span></span></code></pre></div><ol>
+<li>点击&quot;开始压榨&quot;按钮启动内存压榨</li>
+<li>观察内存使用情况和进度</li>
+<li>使用&quot;安全停止&quot;或&quot;紧急停止&quot;结束压榨</li>
+</ol>
+<h3 id="配置选项">
+<a class="header-anchor" href="#%e9%85%8d%e7%bd%ae%e9%80%89%e9%a1%b9"></a>
+配置选项
+</h3><p>程序会自动创建 <code>config.ini</code> 配置文件，您可以修改以下参数：</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>CPU 压榨机——介绍及下载</title>
+      <link>https://li958634.github.io/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Fri, 01 Aug 2025 15:14:42 &#43;0000</pubDate>
+      <author>14706825732@163.com (代码小梓)</author>
+      <guid>https://li958634.github.io/dmxzweb/post/cpu-%E5%8E%8B%E6%A6%A8%E6%9C%BA%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%B8%8B%E8%BD%BD/</guid>
+      <description>
+        <![CDATA[<h1>CPU 压榨机——介绍及下载</h1><p>作者：代码小梓（14706825732@163.com）</p>
+        
+          <blockquote>
+<ul>
+<li>
+<h3 id="cpu压榨机---业余级cpu性能测试工具">
+<a class="header-anchor" href="#cpu%e5%8e%8b%e6%a6%a8%e6%9c%ba---%e4%b8%9a%e4%bd%99%e7%ba%a7cpu%e6%80%a7%e8%83%bd%e6%b5%8b%e8%af%95%e5%b7%a5%e5%85%b7"></a>
+CPU压榨机 - 业余级CPU性能测试工具
+</h3><h4 id="一功能与特点">
+<a class="header-anchor" href="#%e4%b8%80%e5%8a%9f%e8%83%bd%e4%b8%8e%e7%89%b9%e7%82%b9"></a>
+一、功能与特点
+</h4><ol>
+<li><strong>核心功能</strong></li>
+</ol>
+</li>
+<li>
+<p>多线程压力测试：支持全核心满载测试，可自定义线程数</p>
+</li>
+<li>
+<p>实时监控：动态显示CPU使用率，可视化进度条</p>
+</li>
+<li>
+<p>参数调节：可设置测试持续时间、计算速度和最大CPU占用率</p>
+</li>
+<li>
+<p>安全机制：提供正常停止和紧急停止双保险</p>
+<p>2.<strong>特色功能</strong></p>
+</li>
+<li>
+<p>主题切换：支持深色/浅色/系统三种主题模式</p>
+</li>
+<li>
+<p>日志系统：完整记录测试过程，支持日志清除</p>
+</li>
+<li>
+<p>可视化界面：采用Modern UI设计，操作直观</p>
+</li>
+<li>
+<p>硬件检测：自动识别CPU核心数量</p>
+</li>
+</ul>
+<h4 id="二代码解析">
+<a class="header-anchor" href="#%e4%ba%8c%e4%bb%a3%e7%a0%81%e8%a7%a3%e6%9e%90"></a>
+二、代码解析
+</h4><ol>
+<li><strong>核心算法</strong></li>
+</ol>
+<p>python</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="k">def</span> <span class="nf">cpu_stress_worker</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">speed_factor</span><span class="p">,</span> <span class="n">max_usage</span><span class="p">,</span> <span class="n">stop_event</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 数学运算核心</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cycles</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10000</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_usage</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cycles</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">     <span class="c1"># 精确控制计算间隔</span>
+</span></span><span class="line"><span class="cl">     <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">     <span class="k">if</span> <span class="n">elapsed</span> <span class="o">&lt;</span> <span class="n">sleep_time</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span> <span class="o">-</span> <span class="n">elapsed</span><span class="p">)</span>
+</span></span></code></pre></div><ol>
+<li><strong>架构设计</strong></li>
+</ol>
+<ul>
+<li>
+<p>前端：CustomTkinter构建的现代化GUI，win11样式</p>
+</li>
+<li>
+<p>后端：multiprocessing多进程压力测试</p>
+</li>
+<li>
+<p>监控：psutil实时获取CPU数据</p>
+</li>
+<li>
+<p>日志：CTkTextbox实现的滚动日志系统</p>
+<ol start="2">
+<li><strong>关键技术点</strong></li>
+</ol>
+</li>
+<li>
+<p>进程管理：通过multiprocessing.Process创建测试进程</p>
+</li>
+<li>
+<p>事件控制：使用Event对象实现进程同步</p>
+</li>
+<li>
+<p>资源监控：定时器轮询机制更新UI状态</p>
+</li>
+<li>
+<p>异常处理：完善的错误捕获和提示机制</p>
+</li>
+</ul>
+<h4 id="三使用指南">
+<a class="header-anchor" href="#%e4%b8%89%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97"></a>
+三、使用指南
+</h4><ol>
+<li>
+<p><strong>操作流程</strong></p>
+</li>
+<li>
+<p>设置测试参数：</p>
+<ul>
+<li>持续时间（秒）
+<ul>
+<li>线程数（默认全核心）</li>
+</ul>
+</li>
+<li>最大CPU占用率</li>
+</ul>
+<p>2.启动测试：</p>
+<ul>
+<li>
+<p>点击&quot;开始压力测试&quot;</p>
+</li>
+<li>
+<p>确认警告信息</p>
+<p>3.监控状态：</p>
+<ul>
+<li>实时查看CPU使用率</li>
+</ul>
+</li>
+<li>
+<p>观察日志输出</p>
+<p>4.停止测试：</p>
+<ul>
+<li>正常停止：等待完成或手动停止</li>
+</ul>
+</li>
+<li>
+<p>紧急停止：立即终止所有进程</p>
+</li>
+</ul>
+<p><strong>界面说明</strong></p>
+<ul>
+<li>仪表盘：核心监控区域，显示CPU状态</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>测试日志：记录所有测试事件</li>
+<li>系统设置：查看硬件信息和默认配置
+<ul>
+<li>关于页面：开发者信息和项目链接</li>
+</ul>
+</li>
+</ul>
+<h4 id="四注意事项">
+<a class="header-anchor" href="#%e5%9b%9b%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9"></a>
+四、注意事项
+</h4><pre><code> 1. **安全警告**
+ ❗ 高负载可能导致：
+
+ - CPU温度急剧升高
+</code></pre>
+<ul>
+<li>
+<p>系统响应迟缓</p>
+        
+        <hr><p>本文2025-08-01首发于<a href='https://li958634.github.io/dmxzweb/'>代码小梓-コード小梓</a>，最后修改于2025-08-01</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
